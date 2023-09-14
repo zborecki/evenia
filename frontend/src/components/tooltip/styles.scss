@@ -1,0 +1,31 @@
+@mixin _base {
+  @apply 
+    absolute 
+    bg-secondary-main 
+    inline-block 
+    opacity-0 
+    pointer-events-none 
+    px-2 
+    py-1 
+    rounded-full 
+    text-gray-0 
+    text-label-xsm 
+    transition-opacity
+  ;
+  content: attr(aria-label);
+}
+
+.tooltip {
+  @apply relative;
+
+  &--right {
+    &::before {
+      @include _base;
+      @apply -right-3/4;
+    }
+  }
+
+  &:hover::before {
+    @apply opacity-100;
+  }
+}

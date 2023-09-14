@@ -1,0 +1,17 @@
+.evenia-logo {
+  @apply flex gap-2 items-center max-w-fit;
+
+  &__logomark {
+    .primary {
+      @apply fill-primary-main;
+    }
+  
+    .secondary {
+      @apply fill-secondary-main;
+    }
+  }
+
+  &__logotype path {
+    @apply fill-gray-0;
+  }
+}

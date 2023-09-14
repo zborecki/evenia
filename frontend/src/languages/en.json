@@ -1,4 +1,7 @@
 {
+  "Common": {
+    "return_home": "Return home"
+  },
   "Home": {
     "title": "Hello Next.js!"
   }
