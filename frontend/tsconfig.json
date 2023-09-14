@@ -15,6 +15,7 @@
     "noEmit": true,
     "paths": {
       "#components/*": ["./src/components/*"],
+      "#layouts/*": ["./src/layouts/*"],
       "#libraries/*": ["./src/libraries/*"],
       "#props/*": ["./src/props/*"],
       "#providers/*": ["./src/providers/*"],
@@ -38,8 +39,9 @@
   "include": [
     ".eslintrc.js",
     "next.config.js",
-    "postcss.config.mjs",
+    "postcss.config.js",
     "next-env.d.ts",
+    "tailwind.config.js",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
