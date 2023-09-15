@@ -15,7 +15,7 @@
   content: attr(aria-label);
 }
 
-.tooltip {
+.evenia-tooltip {
   @apply relative;
 
   &--right {

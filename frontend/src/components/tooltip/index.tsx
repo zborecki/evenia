@@ -12,7 +12,7 @@ const Tooltip: FC<TooltipProps> = ({
 }) => {
   const childrenWithTooltip = useMemo(() => cloneElement(children, {
     'aria-label': title,
-    className: `${children.props.className} tooltip tooltip--${position}`
+    className: `${children.props.className} evenia-tooltip evenia-tooltip--${position}`
   }), [children, position, title]);
 
   return childrenWithTooltip;

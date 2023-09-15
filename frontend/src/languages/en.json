@@ -1,4 +1,8 @@
 {
+  "Button": {
+    "explore_now": "Explore Now",
+    "sign_in": "Sign In"
+  },
   "Common": {
     "return_home": "Return home"
   },

@@ -2,6 +2,6 @@
   @apply bg-indigo-dark py-5;
 
   &__container {
-    @apply evenia-container;
+    @apply evenia-container flex items-center justify-between;
   }
 }

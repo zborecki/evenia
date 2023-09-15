@@ -39,6 +39,7 @@ module.exports = {
           main: '#241E4D' // footer
         },
         primary: {
+          light: '#02A6FF',
           main: '#624CF5'
         },
         secondary: {
@@ -46,6 +47,11 @@ module.exports = {
         }
       },
       fontSize: {
+        'button-md': ['18px', {
+          fontWeight: 600,
+          letterSpacing: '0.36px',
+          lineHeight: 'normal'
+        }],
         'label-xsm': ['12px', {
           fontWeight: 500,
           lineHeight: '16px'
