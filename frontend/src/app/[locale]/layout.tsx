@@ -6,7 +6,7 @@ import { FC } from 'react';
 import 'normalize.css';
 import '#theme/global.scss';
 
-import { LayoutProps } from '#props/common';
+import { LayoutProps } from '#props/components';
 import { ReduxProvider } from '#providers/redux-provider';
 
 const poppins = Poppins({

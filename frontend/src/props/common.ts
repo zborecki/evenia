@@ -1,11 +1,8 @@
-import { PropsWithChildren } from 'react';
-
-export interface BaseProps {
-  className?: string;
+export interface Link {
+  children: string;
+  href?: string;
 }
 
-export interface LayoutProps extends PropsWithChildren {
-  params: {
-    locale: string;
-  }
+export interface ProtectedLink extends Link {
+  isProtected?: boolean;
 }

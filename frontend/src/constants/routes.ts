@@ -1,3 +1,4 @@
 export enum ROUTE {
-  HOME = '/'
+  HOME = '/',
+  TERMS_OF_SERVICE = '/terms-of-service'
 }
