@@ -1,0 +1,41 @@
+.evenia-button {
+  @apply inline-block rounded-full transition-colors;
+
+  &--contained {
+    @apply bg-primary-main text-gray-0;
+
+    &.evenia-button {
+      &--medium {
+        @apply px-6 py-4;
+      }
+    }
+  }
+
+  &--medium {
+    @apply text-button-md;
+  }
+
+  &--outlined {
+    @apply border-2 border-primary-main border-solid text-primary-main;
+
+    &.evenia-button {
+      &--medium {
+        @apply px-5 py-[14px];
+      }
+    }
+  }
+
+  &:hover {
+    @apply cursor-pointer;
+
+    &.evenia-button {
+      &--contained {
+        @apply bg-secondary-main;
+      }
+
+      &--outlined {
+        @apply bg-secondary-main/[.10] border-secondary-main text-secondary-main;
+      }
+    }
+  }
+}
