@@ -1,13 +1,7 @@
-import { FC, HTMLProps } from 'react';
-import '#components/button/styles.scss';
+import { FC } from 'react';
 
-type ButtonProps = {
-  as?: 'a' | 'button';
-  href?: string;
-  children?: string;
-  size?: 'medium';
-  variant?: 'contained' | 'outlined';
-} & HTMLProps<HTMLButtonElement & HTMLAnchorElement>;
+import { ButtonProps } from '#props/components';
+import '#components/button/styles.scss';
 
 const Button: FC<ButtonProps> = ({
   as = 'a',
