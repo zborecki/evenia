@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { BaseProps } from '#props/common';
+import { BaseProps } from '#props/components';
 
 const Logomark: FC<BaseProps> = ({ className }) => (
   <svg

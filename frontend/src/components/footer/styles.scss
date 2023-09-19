@@ -1,0 +1,15 @@
+.evenia-footer {
+  @apply bg-indigo-dark py-8;
+
+  &__container {
+    @apply evenia-container flex items-center justify-between;
+  }
+
+  &__item {
+    @apply inline mr-10 last-of-type:mr-0;
+  }
+
+  &__link {
+    @apply hover:text-primary-main text-gray-0 transition-colors;
+  }
+}

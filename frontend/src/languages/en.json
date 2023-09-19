@@ -8,5 +8,9 @@
   },
   "Home": {
     "title": "Hello Next.js!"
+  },
+  "Label": {
+    "home": "Home",
+    "terms_of_service": "Terms of service"
   }
 }
