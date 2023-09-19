@@ -12,5 +12,9 @@
   "Label": {
     "home": "Home",
     "terms_of_service": "Terms of service"
+  },
+  "Sign_up": {
+    "description": "Create your account today",
+    "title": "Create an account"
   }
 }

@@ -1,6 +1,8 @@
 import { HTMLProps, PropsWithChildren, ReactElement } from 'react';
 
-import { Link, ProtectedLink } from '#props/common';
+import { Details, Link, ProtectedLink } from '#props/common';
+
+export type AuthProps = Details & PropsWithChildren;
 
 export interface BaseProps {
   className?: string;
