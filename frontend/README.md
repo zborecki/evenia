@@ -14,6 +14,7 @@ All commands are run from the root of the project, from a terminal:
 - Next.js (App Router)
 - Next-intl (supports server components)
 - Normalize.css
+- Redux Persist
 - Redux Toolkit
 - Sass
 - TailwindCSS
