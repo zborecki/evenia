@@ -32,6 +32,9 @@ module.exports = {
         full: '100px'
       },
       colors: {
+        error: {
+          main: '#FF4D2D' // critical
+        },
         gray: {
           0: '#FFFFFF', // white
           10: '#F6F6F6', // white gray
@@ -45,6 +48,7 @@ module.exports = {
           dark: '#161239', // header
           darker: '#000C29', // background
           light: '#292451', // card
+          lighter: '#3C3860',
           main: '#241E4D' // footer
         },
         primary: {
@@ -72,6 +76,10 @@ module.exports = {
         'paragraph-lg': ['18px', {
           fontWeight: 400,
           lineHeight: '28px'
+        }],
+        'paragraph-sm': ['14px', {
+          fontWeight: 400,
+          lineHeight: '20px'
         }]
       }
     }

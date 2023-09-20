@@ -1,4 +1,7 @@
-import { HTMLProps, PropsWithChildren, ReactElement } from 'react';
+import { FormikErrors, FormikTouched } from 'formik';
+import {
+  ChangeEventHandler, HTMLInputTypeAttribute, HTMLProps, PropsWithChildren, ReactElement
+} from 'react';
 
 import { Details, Link, ProtectedLink } from '#props/common';
 
@@ -12,10 +15,33 @@ export type ButtonProps = {
   as?: 'a' | 'button';
   size?: 'medium';
   variant?: 'contained' | 'outlined';
-} & HTMLProps<HTMLButtonElement & HTMLAnchorElement> & Link;
+  width?: 'full' | 'standard';
+} & BaseProps & HTMLProps<HTMLButtonElement> & Link;
 
 export interface FooterLinksProps {
   links: ProtectedLink[];
+}
+
+export interface FormContentProps<T> {
+  errors: FormikErrors<T>;
+  handleChange?: ChangeEventHandler<HTMLInputElement>;
+  touched: FormikTouched<T>;
+  values: T;
+}
+
+export interface InputButtonProps {
+  errors?: string;
+  onClick: () => void;
+}
+
+export interface InputProps {
+  errors?: string;
+  id: string;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+  placeholder: string;
+  touched?: boolean;
+  type?: HTMLInputTypeAttribute;
+  value?: number | string;
 }
 
 export interface InteractiveSEOProps {
@@ -27,6 +53,14 @@ export interface LayoutProps extends PropsWithChildren {
     locale: string;
   }
 }
+
+export interface SignUpFormButtons {
+  isSubmitting: boolean;
+}
+
+export type SignUpFormProps = {
+  [key in 'email' | 'fullName' | 'password' | 'repeatPassword']: string;
+};
 
 export interface TooltipProps {
   children: ReactElement<any, any>;

@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 
 import Layout from '#layouts/base-layout';
 
-const Home = () => {
+const Page = () => {
   const t = useTranslations('Home');
 
   return (
@@ -14,4 +14,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Page;

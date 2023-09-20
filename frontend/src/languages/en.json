@@ -1,10 +1,17 @@
 {
   "Button": {
+    "create_account": "Create Account",
     "explore_now": "Explore Now",
     "sign_in": "Sign In"
   },
   "Common": {
     "return_home": "Return home"
+  },
+  "Form": {
+    "invalid": "The field is invalid",
+    "required": "The field is required",
+    "too_long": "The field contains too many characters",
+    "too_short": "The phrase is too short"
   },
   "Home": {
     "title": "Hello Next.js!"
@@ -12,6 +19,12 @@
   "Label": {
     "home": "Home",
     "terms_of_service": "Terms of service"
+  },
+  "Placeholder": {
+    "confirm_password": "Confirm password",
+    "e_mail": "E-mail",
+    "full_name": "Full name",
+    "password": "Password"
   },
   "Sign_up": {
     "description": "Create your account today",
