@@ -18,6 +18,10 @@ export type ButtonProps = {
   width?: 'full' | 'standard';
 } & BaseProps & HTMLProps<HTMLButtonElement> & Link;
 
+export interface FormButtonsProps {
+  isSubmitting: boolean;
+}
+
 export interface FooterLinksProps {
   links: ProtectedLink[];
 }
@@ -54,13 +58,13 @@ export interface LayoutProps extends PropsWithChildren {
   }
 }
 
-export interface SignUpFormButtons {
-  isSubmitting: boolean;
-}
+export type SignInFormProps = {
+  [key in 'email' | 'password']: string;
+};
 
 export type SignUpFormProps = {
-  [key in 'email' | 'fullName' | 'password' | 'repeatPassword']: string;
-};
+  [key in 'fullName' | 'repeatPassword']: string;
+} & SignInFormProps;
 
 export interface TooltipProps {
   children: ReactElement<any, any>;

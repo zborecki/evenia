@@ -5,6 +5,7 @@
     "sign_in": "Sign In"
   },
   "Common": {
+    "please_wait": "Please wait...",
     "return_home": "Return home"
   },
   "Form": {
@@ -26,8 +27,14 @@
     "full_name": "Full name",
     "password": "Password"
   },
+  "Sign_in": {
+    "description": "Log in with your email account",
+    "title": "Log in"
+  },
   "Sign_up": {
     "description": "Create your account today",
+    "error": "Sorry, but your account wasn't created successfully 😔",
+    "success": "You'll be redirected to the home page in a moment",
     "title": "Create an account"
   }
 }

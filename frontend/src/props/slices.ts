@@ -1,3 +1,3 @@
 export interface UserSlice {
-  isLoggedIn: boolean;
+  id: string | null;
 }

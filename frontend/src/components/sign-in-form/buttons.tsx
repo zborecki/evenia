@@ -17,15 +17,15 @@ const Buttons: FC<FormButtonsProps> = ({ isSubmitting }) => {
         type="submit"
         width="full"
       >
-        { button('create_account') }
+        { button('sign_in') }
       </Button>
       <Button
         as="a"
-        href={ROUTE.SIGN_IN}
+        href={ROUTE.SIGN_UP}
         variant="outlined"
         width="full"
       >
-        { button('sign_in') }
+        { button('create_account') }
       </Button>
     </>
   );

@@ -3,11 +3,13 @@ import { Poppins } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { FC } from 'react';
-import 'normalize.css';
-import '#theme/global.scss';
 
 import { LayoutProps } from '#props/components';
+import { GraphQLProvider } from '#providers/apollo-provider';
 import { ReduxProvider } from '#providers/redux-provider';
+
+import 'normalize.css';
+import '#theme/global.scss';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -37,7 +39,9 @@ const PrimaryLayout: FC<LayoutProps> = async ({ children, params }) => {
       <body className={poppins.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ReduxProvider>
-            { children }
+            <GraphQLProvider>
+              { children }
+            </GraphQLProvider>
           </ReduxProvider>
         </NextIntlClientProvider>
       </body>

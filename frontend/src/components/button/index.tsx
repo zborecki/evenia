@@ -6,7 +6,7 @@ import '#components/button/styles.scss';
 const Button: FC<ButtonProps> = ({
   as = 'a',
   children,
-  className,
+  className = '',
   href,
   size = 'medium',
   variant = 'contained',
