@@ -5,3 +5,7 @@
 body {
   @apply bg-indigo-darker text-gray-0;
 }
+
+::selection {
+  @apply bg-primary-main text-gray-0;
+}

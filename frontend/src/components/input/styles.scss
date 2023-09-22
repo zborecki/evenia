@@ -1,0 +1,67 @@
+.evenia-input {
+  @apply mb-6 relative; 
+
+  &__button {
+    @apply box-content p-1 absolute right-4 rounded-[50%] top-[calc((63px-32px)/2)] transition-colors;
+
+    &:hover {
+      @apply bg-indigo-light;
+
+      path {
+        @apply fill-primary-main 
+      }
+    }
+
+    path {
+      @apply fill-gray-60 transition-colors;
+    }
+
+    &--error path {
+      @apply fill-error-main;
+    }
+  }
+
+  &__error {
+    @apply text-error-main text-paragraph-sm;
+  }
+
+  &__field {
+    @apply 
+      bg-indigo-main 
+      block
+      border-2 
+      border-solid 
+      border-transparent 
+      p-[17.5px_16px] 
+      placeholder:text-gray-60 
+      rounded-full 
+      text-gray-0
+      transition-colors
+      w-full
+    ;
+
+    &:focus {
+      @apply outline-none;
+    }
+
+    &:focus, &:hover {
+      @apply border-primary-main;
+    }
+
+    &--error {
+      @apply border-error-main mb-[10px] placeholder:text-error-main pr-[calc(16px+24px+16px)];
+    }
+
+    &--password {
+      @apply pr-[calc(16px+32px+16px)];
+    }
+  }
+
+  &__icon {
+    @apply absolute right-4 top-[calc((63px-24px)/2)];
+
+    > g > rect {
+      @apply fill-error-main;
+    }
+  }
+}

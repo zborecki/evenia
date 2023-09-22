@@ -9,11 +9,15 @@ All commands are run from the root of the project, from a terminal:
 | `npm run lint`            | Analyze files and find incorrect patterns        |
 
 ## 📦 Packages
+- Apollo Client
 - ESLint (custom Airbnb's rules)
+- GraphQL
 - HeadlessUI
 - Next.js (App Router)
 - Next-intl (supports server components)
 - Normalize.css
+- React Toastify
+- Redux Persist
 - Redux Toolkit
 - Sass
 - TailwindCSS

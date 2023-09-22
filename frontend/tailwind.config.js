@@ -13,6 +13,14 @@ module.exports = {
           maxWidth: '1280px',
           paddingLeft: theme('padding.4'),
           paddingRight: theme('padding.4')
+        },
+        '.evenia-empty': {
+          minHeight: 'calc(100vh - 99px - 102px)'
+        },
+        '.evenia-form': {
+          background: theme('backgroundColor.indigo.dark'),
+          borderRadius: theme('borderRadius.3xl'),
+          padding: theme('padding.12')
         }
       });
     })
@@ -20,9 +28,13 @@ module.exports = {
   theme: {
     extend: {
       borderRadius: {
+        '3xl': '20px',
         full: '100px'
       },
       colors: {
+        error: {
+          main: '#FF4D2D' // critical
+        },
         gray: {
           0: '#FFFFFF', // white
           10: '#F6F6F6', // white gray
@@ -36,6 +48,7 @@ module.exports = {
           dark: '#161239', // header
           darker: '#000C29', // background
           light: '#292451', // card
+          lighter: '#3C3860',
           main: '#241E4D' // footer
         },
         primary: {
@@ -52,9 +65,21 @@ module.exports = {
           letterSpacing: '0.36px',
           lineHeight: 'normal'
         }],
+        'heading-md': ['28px', {
+          fontWeight: 500,
+          lineHeight: '36px'
+        }],
         'label-xsm': ['12px', {
           fontWeight: 500,
           lineHeight: '16px'
+        }],
+        'paragraph-lg': ['18px', {
+          fontWeight: 400,
+          lineHeight: '28px'
+        }],
+        'paragraph-sm': ['14px', {
+          fontWeight: 400,
+          lineHeight: '20px'
         }]
       }
     }
