@@ -6,6 +6,7 @@ import { FC } from 'react';
 
 import { LayoutProps } from '#props/components';
 import { GraphQLProvider } from '#providers/apollo-provider';
+import { CookiesProvider } from '#providers/cookies-provider';
 import { ReduxProvider } from '#providers/redux-provider';
 
 import 'normalize.css';
@@ -40,7 +41,9 @@ const PrimaryLayout: FC<LayoutProps> = async ({ children, params }) => {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ReduxProvider>
             <GraphQLProvider>
-              { children }
+              <CookiesProvider>
+                { children }
+              </CookiesProvider>
             </GraphQLProvider>
           </ReduxProvider>
         </NextIntlClientProvider>

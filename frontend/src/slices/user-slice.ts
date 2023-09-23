@@ -4,7 +4,7 @@ import { SetTokenPayload } from '#props/payloads';
 import { UserSlice } from '#props/slices';
 
 const initialState: UserSlice = {
-  id: localStorage.getItem('token') ?? null
+  id: null
 };
 
 export const userSlice = createSlice({

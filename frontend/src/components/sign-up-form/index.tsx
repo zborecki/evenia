@@ -5,6 +5,7 @@ import { useFormik } from 'formik';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
+import { useCookies } from 'react-cookie';
 import { toast } from 'react-toastify';
 
 import { MUTATE_ORGANIZER } from '#/services/organizer-service';
@@ -12,6 +13,7 @@ import { Buttons } from '#components/sign-up-form/buttons';
 import { Fields } from '#components/sign-up-form/fields';
 import { Toast } from '#components/toast';
 import { commonSettings, signUpInitialValues } from '#constants/form';
+import { COOKIE } from '#constants/keys';
 import { ROUTE } from '#constants/routes';
 import { signUpValidationSchema } from '#constants/schemas';
 import { SignUpFormProps } from '#props/components';
@@ -21,6 +23,7 @@ const SignUpForm = () => {
   const router = useRouter();
   const common = useTranslations('Common');
   const t = useTranslations('Sign_up');
+  const [, setCookie] = useCookies([COOKIE.AUTH]);
   const [createOrganizer, { data }] = useMutation<MutateOrganizerResponse>(MUTATE_ORGANIZER);
   const {
     errors, handleChange, handleSubmit, isSubmitting, touched, values
@@ -49,7 +52,7 @@ const SignUpForm = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       if (data) {
-        localStorage.setItem('token', JSON.stringify(data.createOrganizer.id));
+        setCookie(COOKIE.AUTH, data.createOrganizer.id);
         router.push(ROUTE.HOME);
       }
     }, 3500);
