@@ -1,23 +1,43 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
-import { SetTokenPayload } from '#props/payloads';
 import { UserSlice } from '#props/slices';
+import { FETCH_USER_DETAILS_BY_ID } from '#reducers/user-reducers';
 
 const initialState: UserSlice = {
-  id: localStorage.getItem('token') ?? null
+  data: {
+    email: '',
+    fullName: '',
+    id: '',
+    password: ''
+  },
+  isLoading: false,
+  isLoggedIn: false
 };
 
 export const userSlice = createSlice({
-  name: 'user',
-  initialState,
-  reducers: {
-    SET_TOKEN: (state, action: PayloadAction<SetTokenPayload>) => ({
+  extraReducers: ({ addCase }) => {
+    addCase(FETCH_USER_DETAILS_BY_ID.fulfilled, (_, { payload }) => ({
+      data: { ...payload },
+      isLoading: false,
+      isLoggedIn: true
+    }));
+    addCase(FETCH_USER_DETAILS_BY_ID.pending, (state) => ({
       ...state,
-      id: action.payload.id
-    })
+      isLoading: true,
+      isLoggedIn: false
+    }));
+    addCase(FETCH_USER_DETAILS_BY_ID.rejected, (state) => ({
+      ...state,
+      isLoading: false,
+      isLoggedIn: false
+    }));
+  },
+  initialState,
+  name: 'user',
+  reducers: {
   }
 });
 
-export const { SET_TOKEN } = userSlice.actions;
-
 export const userReducer = userSlice.reducer;
+
+export const userSelector = (state: { user: UserSlice }) => state.user;

@@ -1,3 +1,10 @@
 export interface UserSlice {
-  id: string | null;
+  data: {
+    email: string;
+    fullName: string;
+    id: string;
+    password: string;
+  },
+  isLoading: boolean;
+  isLoggedIn: boolean;
 }

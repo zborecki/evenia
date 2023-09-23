@@ -29,6 +29,9 @@
   },
   "Sign_in": {
     "description": "Log in with your email account",
+    "error": "Incorrect email or password",
+    "info": "Waiting for a response from the server",
+    "success": "Congratulations, you have successfully logged in",
     "title": "Log in"
   },
   "Sign_up": {

@@ -16,10 +16,12 @@
     "paths": {
       "#components/*": ["./src/components/*"],
       "#constants/*": ["./src/constants/*"],
+      "#hooks/*": ["./src/hooks/*"],
       "#layouts/*": ["./src/layouts/*"],
       "#libraries/*": ["./src/libraries/*"],
       "#props/*": ["./src/props/*"],
       "#providers/*": ["./src/providers/*"],
+      "#reducers/*": ["./src/reducers/*"],
       "#slices/*": ["./src/slices/*"],
       "#svg/*": ["./src/svg/*"],
       "#theme/*": ["./src/theme/*"],

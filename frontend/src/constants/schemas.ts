@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
 
-export const signInValidationSchema = {
+const baseValidationSchema = {
   email: Yup.string().email('invalid').required('required'),
   password: Yup.string()
     .min(3, 'too_short')
@@ -8,8 +8,10 @@ export const signInValidationSchema = {
     .required('required')
 };
 
+export const signInValidationSchema = Yup.object().shape({ ...baseValidationSchema });
+
 export const signUpValidationSchema = Yup.object().shape({
-  ...signInValidationSchema,
+  ...baseValidationSchema,
   fullName: Yup.string()
     .min(5, 'too_short')
     .max(32, 'too_long')
