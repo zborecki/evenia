@@ -22,3 +22,12 @@ export interface MutateOrganizerResponse {
     createdAt: string;
   }
 }
+
+export interface UserDetailsOrganizerResponse {
+  organizer: {
+    email: string;
+    fullName: string;
+    id: string;
+    password: string;
+  }
+}

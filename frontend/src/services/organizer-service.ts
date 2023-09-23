@@ -36,3 +36,14 @@ export const MUTATE_ORGANIZER = gql`
     }
   }
 `;
+
+export const USER_DETAILS_ORGANIZER = gql`
+  query UserDetailsOrganizer($id: ID!) {
+    organizer (where: {id: $id}) {
+      email,
+      fullName,
+      id,
+      password
+    }
+  }
+`;

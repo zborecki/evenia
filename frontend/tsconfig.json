@@ -21,6 +21,7 @@
       "#libraries/*": ["./src/libraries/*"],
       "#props/*": ["./src/props/*"],
       "#providers/*": ["./src/providers/*"],
+      "#reducers/*": ["./src/reducers/*"],
       "#slices/*": ["./src/slices/*"],
       "#svg/*": ["./src/svg/*"],
       "#theme/*": ["./src/theme/*"],

@@ -1,3 +1,3 @@
-export interface SetTokenPayload {
+export interface FetchUserDetailsByIdPayload {
   id: string;
 }
