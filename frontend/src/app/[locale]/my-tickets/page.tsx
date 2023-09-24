@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import ProtectedLayout from '#providers/protected-layout';
+import ProtectedLayout from '#layouts/protected-layout';
 
 export const metadata: Metadata = {
   title: 'Evenia - My Tickets'

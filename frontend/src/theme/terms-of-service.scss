@@ -1,0 +1,19 @@
+.evenia-terms-of-service {
+  @apply min-h-[calc(100vh-99px-54px-102px)] pt-[54px];
+
+  &__button {
+    @apply mb-8;
+  }
+
+  &__content {
+    @apply gap-6 grid grid-cols-[1fr_minmax(0,634px)];
+  }
+
+  &__description {
+    @apply text-paragraph-lg whitespace-pre-line;
+  }
+
+  &__title {
+    @apply text-display-md;
+  }
+}

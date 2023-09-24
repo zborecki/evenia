@@ -65,6 +65,10 @@ module.exports = {
           letterSpacing: '0.36px',
           lineHeight: 'normal'
         }],
+        'display-md': ['52px', {
+          fontWeight: 700,
+          lineHeight: '64px'
+        }],
         'heading-md': ['28px', {
           fontWeight: 500,
           lineHeight: '36px'
