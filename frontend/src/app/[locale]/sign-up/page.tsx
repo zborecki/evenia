@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 
 import { Auth } from '#components/auth';
 import { SignUpForm } from '#components/sign-up-form';
-import AuthLayout from '#providers/auth-layout';
+import AuthLayout from '#layouts/auth-layout';
 
 export const metadata: Metadata = {
   title: 'Evenia - Sign up'

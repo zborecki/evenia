@@ -39,5 +39,9 @@
     "error": "Sorry, but your account wasn't created successfully 😔",
     "success": "You'll be redirected to the home page in a moment",
     "title": "Create an account"
+  },
+  "Terms_of_service": {
+    "description": "Learn how to sharpen your focus so you can get more done! This class is ideal for students, professionals and lifelong learners. About this event This is an online event.\n\nWhat You'll Learn:\n\nHow to be more productive through increased focus. Apps and online tools that improve your concentration. How to trick yourself into paying more attention to tasks at hand.",
+    "title": "Terms of service"
   }
 }
