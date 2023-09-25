@@ -7,8 +7,7 @@ import { UserDetailsOrganizerResponse } from '#props/services';
 export const FETCH_USER_DETAILS_BY_ID = createAsyncThunk(
   'user/FETCH_USER_DETAILS_BY_ID',
   async (id: string) => {
-    const client = apolloClient();
-    const { data } = await client.query<UserDetailsOrganizerResponse>({
+    const { data } = await apolloClient().query<UserDetailsOrganizerResponse>({
       query: USER_DETAILS_ORGANIZER,
       variables: { id }
     });

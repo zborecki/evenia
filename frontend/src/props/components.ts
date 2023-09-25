@@ -3,6 +3,8 @@ import {
   ChangeEventHandler, HTMLInputTypeAttribute, HTMLProps, PropsWithChildren, ReactElement
 } from 'react';
 
+import { GetCategoriesResponse } from './services';
+
 import { Details, Link, ProtectedLink } from '#props/common';
 
 export type AuthProps = Details & PropsWithChildren;
@@ -69,6 +71,10 @@ export type SignInFormProps = {
 export type SignUpFormProps = {
   [key in 'fullName' | 'repeatPassword']: string;
 } & SignInFormProps;
+
+export interface TabsProps extends GetCategoriesResponse {
+
+}
 
 export interface TooltipProps {
   children: ReactElement<any, any>;

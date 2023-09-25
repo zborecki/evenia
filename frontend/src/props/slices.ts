@@ -1,3 +1,7 @@
+export interface TabsSlice {
+  categoryId: number;
+}
+
 export interface UserSlice {
   data: {
     email: string;

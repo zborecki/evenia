@@ -22,6 +22,7 @@
       "#props/*": ["./src/props/*"],
       "#providers/*": ["./src/providers/*"],
       "#reducers/*": ["./src/reducers/*"],
+      "#requests/*": ["./src/requests/*"],
       "#slices/*": ["./src/slices/*"],
       "#svg/*": ["./src/svg/*"],
       "#theme/*": ["./src/theme/*"],

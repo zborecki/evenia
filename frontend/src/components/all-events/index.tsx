@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 
+import { Categories } from '#components/all-events/categories';
 import { Section } from '#components/section';
 
 const AllEvents = () => {
@@ -7,7 +8,7 @@ const AllEvents = () => {
 
   return (
     <Section title={t('title')}>
-      All events
+      <Categories />
     </Section>
   );
 };

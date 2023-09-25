@@ -4,6 +4,12 @@ export interface AuthOrganizerResponse {
   }
 }
 
+export interface GetCategoriesResponse {
+  categories: {
+    name: string;
+  }[];
+}
+
 export interface LogInOrganizerResponse {
   organizersConnection: {
     edges: {

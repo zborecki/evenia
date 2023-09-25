@@ -88,6 +88,11 @@ module.exports = {
         'paragraph-sm': ['14px', {
           fontWeight: 400,
           lineHeight: '20px'
+        }],
+        tab: ['20px', {
+          fontWeight: 400,
+          letterSpacing: '0.4px',
+          lineHeight: 'normal'
         }]
       }
     }

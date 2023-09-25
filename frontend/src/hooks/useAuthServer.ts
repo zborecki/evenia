@@ -7,8 +7,7 @@ import { AuthOrganizerResponse } from '#props/services';
 
 export const useAuthServer = async () => {
   const authToken = cookies().get(COOKIE.AUTH);
-  const client = apolloClient();
-  const { data: { organizer } } = await client.query<AuthOrganizerResponse>({
+  const { data: { organizer } } = await apolloClient().query<AuthOrganizerResponse>({
     query: AUTH_ORGANIZER,
     variables: { id: authToken?.value ?? '' }
   });

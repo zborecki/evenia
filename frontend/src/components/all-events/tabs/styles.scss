@@ -1,0 +1,15 @@
+.evenia-tabs {
+  @apply flex gap-[14px] mb-[50px];
+
+  &__tab {
+    @apply hover:bg-secondary-main px-6 py-2 rounded-lg text-tab transition-colors;
+
+    &[aria-selected="true"] {
+      @apply bg-primary-main font-semibold;
+    }
+
+    &:focus {
+      @apply outline outline-1 outline-primary-main;
+    }
+  }
+}
