@@ -1,0 +1,11 @@
+.evenia-section {
+  @apply bg-indigo-dark;
+
+  &__container {
+    @apply evenia-container py-14;
+  }
+
+  &__title {
+    @apply mb-[50px] text-display-sm whitespace-pre-line;
+  }
+}

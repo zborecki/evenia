@@ -69,6 +69,10 @@ module.exports = {
           fontWeight: 700,
           lineHeight: '64px'
         }],
+        'display-sm': ['44px', {
+          fontWeight: 700,
+          lineHeight: '52px'
+        }],
         'heading-md': ['28px', {
           fontWeight: 500,
           lineHeight: '36px'

@@ -58,6 +58,10 @@ export interface LayoutProps extends PropsWithChildren {
   }
 }
 
+export interface SectionProps extends BaseProps, PropsWithChildren {
+  title: string;
+}
+
 export type SignInFormProps = {
   [key in 'email' | 'password']: string;
 };

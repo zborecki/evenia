@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 
+import { AllEvents } from '#components/all-events';
 import Layout from '#layouts/base-layout';
 
 const Page = () => {
@@ -8,7 +9,7 @@ const Page = () => {
   return (
     <Layout>
       <main>
-        <h1>{ t('title') }</h1>
+        <AllEvents />
       </main>
     </Layout>
   );
