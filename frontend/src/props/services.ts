@@ -1,16 +1,22 @@
+import { EventCard } from '#props/common';
+
 export interface AuthOrganizerResponse {
   organizer: {
     id: string;
   }
 }
 
-export interface GetCategoriesResponse {
+export interface EventCardsResponse {
+  events: EventCard[];
+}
+
+export interface CategoriesResponse {
   categories: {
     name: string;
   }[];
 }
 
-export interface LogInOrganizerResponse {
+export interface OrganizerIdResponse {
   organizersConnection: {
     edges: {
       node: {
@@ -29,7 +35,7 @@ export interface MutateOrganizerResponse {
   }
 }
 
-export interface UserDetailsOrganizerResponse {
+export interface OrganizerResponse {
   organizer: {
     email: string;
     fullName: string;

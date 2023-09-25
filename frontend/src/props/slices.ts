@@ -1,3 +1,10 @@
+import { EventCardsResponse } from './services';
+
+export interface EventsSlice {
+  data: EventCardsResponse;
+  isLoading: boolean;
+}
+
 export interface TabsSlice {
   categoryId: number;
 }

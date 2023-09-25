@@ -17,13 +17,13 @@ import { COOKIE } from '#constants/keys';
 import { ROUTE } from '#constants/routes';
 import { signInValidationSchema } from '#constants/schemas';
 import { SignInFormProps } from '#props/components';
-import { LogInOrganizerResponse } from '#props/services';
+import { OrganizerIdResponse } from '#props/services';
 
 const SignInForm = () => {
   const router = useRouter();
   const t = useTranslations('Sign_in');
   const [, setCookie] = useCookies([COOKIE.AUTH]);
-  const [logIn, { data: response }] = useLazyQuery<LogInOrganizerResponse>(LOG_IN_ORGANIZER);
+  const [logIn, { data: response }] = useLazyQuery<OrganizerIdResponse>(LOG_IN_ORGANIZER);
 
   const {
     errors, handleChange, handleSubmit, isSubmitting, touched, values

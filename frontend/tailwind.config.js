@@ -1,3 +1,5 @@
+/* eslint-disable max-lines */
+
 /** @type {import('tailwindcss').Config} */
 
 const plugin = require('tailwindcss/plugin');
@@ -29,6 +31,7 @@ module.exports = {
     extend: {
       borderRadius: {
         '3xl': '20px',
+        card: '14px',
         full: '100px'
       },
       colors: {

@@ -3,9 +3,11 @@ import {
   ChangeEventHandler, HTMLInputTypeAttribute, HTMLProps, PropsWithChildren, ReactElement
 } from 'react';
 
-import { GetCategoriesResponse } from './services';
+import { CategoriesResponse } from './services';
 
-import { Details, Link, ProtectedLink } from '#props/common';
+import {
+  Details, EventCard, Link, ProtectedLink
+} from '#props/common';
 
 export type AuthProps = Details & PropsWithChildren;
 
@@ -50,6 +52,11 @@ export interface InputProps {
   value?: number | string;
 }
 
+export interface InteractiveEventsProps {
+  endpoint?: string;
+  initialEvents: EventCard[];
+}
+
 export interface InteractiveSEOProps {
   ariaLabel?: string;
 }
@@ -72,7 +79,7 @@ export type SignUpFormProps = {
   [key in 'fullName' | 'repeatPassword']: string;
 } & SignInFormProps;
 
-export interface TabsProps extends GetCategoriesResponse {
+export interface TabsProps extends CategoriesResponse {
 
 }
 

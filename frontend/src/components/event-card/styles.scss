@@ -1,0 +1,9 @@
+.evenia-event-card {
+  &__content {
+    @apply bg-indigo-light p-5;
+  }
+  
+  &__image {
+    @apply max-h-[174px] object-cover rounded-t-card;
+  }
+}
