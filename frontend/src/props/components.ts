@@ -67,6 +67,13 @@ export interface LayoutProps extends PropsWithChildren {
   }
 }
 
+export interface LazyImageProps {
+  alt: string;
+  height: number;
+  src: string;
+  width: number;
+}
+
 export interface SectionProps extends BaseProps, PropsWithChildren {
   title: string;
 }

@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import { FC } from 'react';
 
+import { LazyImage } from '#components/lazy-image';
 import { EventCard as Props } from '#props/common';
 import '#components/event-card/styles.scss';
 
@@ -8,13 +8,11 @@ const EventCard: FC<Props> = ({
   author, date, title, image
 }) => (
   <div className="evenia-event-card">
-    <Image
+    <LazyImage
       alt={image.fileName}
-      className="evenia-event-card__image"
-      height={174}
-      loading="lazy"
+      height={200}
       src={image.url}
-      width={294}
+      width={200}
     />
     <div className="evenia-event-card__content">
       <p>{ date }</p>
