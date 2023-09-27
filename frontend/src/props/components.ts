@@ -55,6 +55,7 @@ export interface InputProps {
 export interface InteractiveEventsProps {
   endpoint?: string;
   initialEvents: EventCard[];
+  offset: number;
 }
 
 export interface InteractiveSEOProps {

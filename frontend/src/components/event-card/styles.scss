@@ -1,9 +1,42 @@
+$_LINE_CLAMP: 2;
+
 .evenia-event-card {
+  @apply max-w-fit;
+
+  &__author {
+    @apply text-label-lg;
+  }
+
+  &__author, &__date {
+    @apply text-gray-60;
+  }
+
   &__content {
-    @apply bg-indigo-light p-5;
+    @apply 
+      bg-indigo-light
+      gap-[14px]
+      grid
+      max-w-[294px]
+      p-5
+      rounded-b-card;
+  }
+
+  &__date {
+    @apply text-label-md;
   }
   
   &__image {
     @apply max-h-[174px] object-cover rounded-t-card;
+  }
+
+  &__link {
+    @apply inline-block;
+  }
+
+  &__title {
+    @apply overflow-hidden text-heading-xsm;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: #{$_LINE_CLAMP};
   }
 }

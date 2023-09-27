@@ -1,14 +1,16 @@
 import { gql } from '@apollo/client';
 
-export const GET_EVENTS_BY_ID = gql`
-  query GetEventsById($categoryId: String!, $offset: Int!) {
+export const GET_EVENTS = gql`
+  query GetEvents($categoryId: String!, $offset: Int!) {
     events(where: { category: { _search: $categoryId } }, first: $offset) {
       image {
+        blurDataURL
         fileName
         url
       }
       date
       title
+      slug
       author {
         organizerName
       }

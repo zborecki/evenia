@@ -80,6 +80,18 @@ module.exports = {
           fontWeight: 500,
           lineHeight: '36px'
         }],
+        'heading-xsm': ['20px', {
+          fontWeight: 500,
+          lineHeight: '28px'
+        }],
+        'label-lg': ['18px', {
+          fontWeight: 500,
+          lineHeight: '24px'
+        }],
+        'label-md': ['16px', {
+          fontWeight: 500,
+          lineHeight: '20px'
+        }],
         'label-xsm': ['12px', {
           fontWeight: 500,
           lineHeight: '16px'

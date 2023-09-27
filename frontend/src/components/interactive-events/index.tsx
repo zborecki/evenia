@@ -1,33 +1,51 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { FC, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { Button } from '#components/button';
 import { EventCard } from '#components/event-card';
+import { AppDispatch } from '#libraries/redux';
 import { InteractiveEventsProps } from '#props/components';
-import { SET_EVENTS, eventsSelector } from '#slices/events-slice';
+import { FETCH_EVENTS } from '#reducers/events-reducers';
+import { eventsSelector } from '#slices/events-slice';
 
-const InteractiveEvents: FC<InteractiveEventsProps> = ({ endpoint, initialEvents }) => {
-  const dispatch = useDispatch();
+import '#components/interactive-events/styles.scss';
+
+const InteractiveEvents: FC<InteractiveEventsProps> = ({ endpoint, initialEvents, offset }) => {
+  const common = useTranslations('Common');
+  const dispatch = useDispatch<AppDispatch>();
   const [events] = useState(initialEvents);
-  const { data } = useSelector(eventsSelector);
+  const { data, isLoading } = useSelector(eventsSelector);
 
   useEffect(() => {
-    dispatch(SET_EVENTS(initialEvents));
+    dispatch(FETCH_EVENTS({ categoryId: '', offset }));
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <ul>
+    <>
+      <ul className="evenia-interactive-events">
+        {
+          data.events.map((props) => (
+            <li key={`InteractiveEvents-${props.title}-${props.author}`}>
+              <EventCard {...props} />
+            </li>
+          ))
+        }
+      </ul>
       {
-        events.map((props) => (
-          <li key={`InteractiveEvents-${props.title}-${props.author}`}>
-            <EventCard {...props} />
-          </li>
-        ))
+        events.length === offset
+          ? (
+            <Button as="button" className="evenia-interactive-events__button">
+              { common('see_more') }
+            </Button>
+          )
+          : undefined
       }
-    </ul>
+    </>
   );
 };
 

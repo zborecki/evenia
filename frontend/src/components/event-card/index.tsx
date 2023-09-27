@@ -1,24 +1,31 @@
 import { FC } from 'react';
 
-import { LazyImage } from '#components/lazy-image';
+import { Content } from '#components/event-card/content';
+import { Cover } from '#components/event-card/cover';
 import { EventCard as Props } from '#props/common';
+
 import '#components/event-card/styles.scss';
 
 const EventCard: FC<Props> = ({
-  author, date, title, image
+  author: { organizerName },
+  date,
+  title,
+  image: { blurDataURL, fileName, url },
+  slug
 }) => (
   <div className="evenia-event-card">
-    <LazyImage
-      alt={image.fileName}
-      height={200}
-      src={image.url}
-      width={200}
+    <Cover
+      alt={fileName}
+      blurDataURL={blurDataURL}
+      slug={slug}
+      src={url}
     />
-    <div className="evenia-event-card__content">
-      <p>{ date }</p>
-      <h3>{ title }</h3>
-      <p>{ author.organizerName }</p>
-    </div>
+    <Content
+      author={organizerName}
+      date={date}
+      slug={slug}
+      title={title}
+    />
   </div>
 );
 

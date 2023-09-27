@@ -10,7 +10,8 @@
   "Common": {
     "all": "All",
     "please_wait": "Please wait...",
-    "return_home": "Return home"
+    "return_home": "Return home",
+    "see_more": "See More"
   },
   "Form": {
     "invalid": "The field is invalid",

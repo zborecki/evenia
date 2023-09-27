@@ -8,7 +8,7 @@ import { nextAPI } from '#libraries/axios';
 import { PlaiceholderResponse } from '#props/api';
 import { LazyImageProps } from '#props/components';
 
-const LazyImage: FC<LazyImageProps> = ({
+const LazyImagePrototype: FC<LazyImageProps> = ({
   alt, height, src, width
 }) => {
   const [image, setImage] = useState<PlaiceholderResponse | null>(null);
@@ -44,4 +44,4 @@ const LazyImage: FC<LazyImageProps> = ({
   );
 };
 
-export { LazyImage };
+export { LazyImagePrototype };
