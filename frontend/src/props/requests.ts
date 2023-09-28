@@ -1,4 +1,4 @@
-export interface FetchEventsByIdRequest {
-  categoryId?: string;
+export interface FetchEventsRequest {
+  categoryName?: string;
   offset?: number;
 }

@@ -23,6 +23,7 @@
       "#providers/*": ["./src/providers/*"],
       "#reducers/*": ["./src/reducers/*"],
       "#requests/*": ["./src/requests/*"],
+      "#skeletons/*": ["./src/skeletons/*"],
       "#slices/*": ["./src/slices/*"],
       "#svg/*": ["./src/svg/*"],
       "#theme/*": ["./src/theme/*"],

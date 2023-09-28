@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const GET_EVENTS = gql`
-  query GetEvents($categoryId: String!, $offset: Int!) {
-    events(where: { category: { _search: $categoryId } }, first: $offset) {
+  query GetEvents($categoryName: String!, $offset: Int!) {
+    events(where: { category: { _search: $categoryName } }, first: $offset) {
       image {
         blurDataURL
         fileName

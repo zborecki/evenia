@@ -1,13 +1,15 @@
+'use client';
+
+import { useSelector } from 'react-redux';
+
 import { InteractiveEvents } from '#components/interactive-events';
-import { getEventCards } from '#requests/events-requests';
+import { tabsSelector } from '#slices/tabs-slice';
 
 const OFFSET = 4;
-const Events = async () => {
-  const { events } = await getEventCards({ categoryId: '', offset: OFFSET });
+const Events = () => {
+  const { categoryName } = useSelector(tabsSelector);
 
-  return (
-    <InteractiveEvents initialEvents={events} offset={OFFSET} />
-  );
+  return <InteractiveEvents categoryName={categoryName} offset={OFFSET} />;
 };
 
 export { Events };

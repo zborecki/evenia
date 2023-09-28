@@ -1,0 +1,14 @@
+.evenia-event-card-skeleton {
+  &__content {
+    @apply 
+      bg-indigo-light
+      gap-[14px]
+      grid
+      p-5
+      rounded-b-card;
+  }
+
+  &__image {
+    @apply rounded-t-card;
+  }
+}

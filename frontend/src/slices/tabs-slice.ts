@@ -1,24 +1,24 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { SetCategoryIdPayload } from '#props/payloads';
+import { SET_CATEGORY_NAME_PAYLOAD } from '#props/payloads';
 import { TabsSlice } from '#props/slices';
 
 const initialState: TabsSlice = {
-  categoryId: 0
+  categoryName: ''
 };
 
 export const tabsSlice = createSlice({
   initialState,
   name: 'tab',
   reducers: {
-    SET_CATEGORY_ID: (_, { payload }: SetCategoryIdPayload) => ({
-      categoryId: payload.categoryId
+    SET_CATEGORY_NAME: (_, { payload }: SET_CATEGORY_NAME_PAYLOAD) => ({
+      categoryName: payload.categoryName
     })
   }
 });
 
-export const { SET_CATEGORY_ID } = tabsSlice.actions;
+export const { SET_CATEGORY_NAME } = tabsSlice.actions;
 
 export const tabsReducer = tabsSlice.reducer;
 
-export const tabsSelector = (state: TabsSlice) => state;
+export const tabsSelector = (state: { tab: TabsSlice }) => state.tab;

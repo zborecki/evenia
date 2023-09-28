@@ -1,14 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { SetEventsPayload } from '#props/payloads';
+import { SET_EVENTS_PAYLOAD } from '#props/payloads';
 import { EventsSlice } from '#props/slices';
-import { FETCH_EVENTS } from '#reducers/events-reducers';
+import { FETCH_EVENTS, UPDATE_EVENTS } from '#reducers/events-reducers';
 
 const initialState: EventsSlice = {
   data: {
     events: []
   },
-  isLoading: false
+  isLoading: true
 };
 
 export const eventsSlice = createSlice({
@@ -25,11 +25,25 @@ export const eventsSlice = createSlice({
       ...state,
       isLoading: false
     }));
+    addCase(UPDATE_EVENTS.fulfilled, (_, { payload: { events } }) => ({
+      data: {
+        events: [...events]
+      },
+      isLoading: false
+    }));
+    addCase(UPDATE_EVENTS.pending, (state) => ({
+      ...state,
+      isLoading: true
+    }));
+    addCase(UPDATE_EVENTS.rejected, (state) => ({
+      ...state,
+      isLoading: false
+    }));
   },
   initialState,
   name: 'events',
   reducers: {
-    SET_EVENTS: (_, { payload }: SetEventsPayload) => ({
+    SET_EVENTS: (_, { payload }: SET_EVENTS_PAYLOAD) => ({
       data: {
         events: [...payload]
       },

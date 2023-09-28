@@ -1,11 +1,11 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Button } from '#components/button';
-import { EventCard } from '#components/event-card';
+import { Cards } from './cards';
+
+import { SeeMoreButton } from '#components/interactive-events/button';
 import { AppDispatch } from '#libraries/redux';
 import { InteractiveEventsProps } from '#props/components';
 import { FETCH_EVENTS } from '#reducers/events-reducers';
@@ -13,36 +13,24 @@ import { eventsSelector } from '#slices/events-slice';
 
 import '#components/interactive-events/styles.scss';
 
-const InteractiveEvents: FC<InteractiveEventsProps> = ({ endpoint, initialEvents, offset }) => {
-  const common = useTranslations('Common');
+const InteractiveEvents: FC<InteractiveEventsProps> = ({ categoryName = '', offset }) => {
   const dispatch = useDispatch<AppDispatch>();
-  const [events] = useState(initialEvents);
-  const { data, isLoading } = useSelector(eventsSelector);
+  const { data: { events }, isLoading } = useSelector(eventsSelector);
 
   useEffect(() => {
-    dispatch(FETCH_EVENTS({ categoryId: '', offset }));
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    dispatch(FETCH_EVENTS({ categoryName, offset }));
+  }, [dispatch, categoryName, offset]);
 
   return (
     <>
-      <ul className="evenia-interactive-events">
-        {
-          data.events.map((props) => (
-            <li key={`InteractiveEvents-${props.title}-${props.author}`}>
-              <EventCard {...props} />
-            </li>
-          ))
-        }
-      </ul>
+      <Cards
+        events={events}
+        isLoading={isLoading}
+        offset={offset}
+      />
       {
-        events.length === offset
-          ? (
-            <Button as="button" className="evenia-interactive-events__button">
-              { common('see_more') }
-            </Button>
-          )
+        events.length >= offset
+          ? <SeeMoreButton initialOffset={offset} />
           : undefined
       }
     </>

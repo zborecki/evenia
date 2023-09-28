@@ -1,16 +1,16 @@
 import { GET_EVENTS } from '#/services/events-service';
 import { apolloClient } from '#libraries/apollo-client';
-import { FetchEventsByIdRequest } from '#props/requests';
+import { FetchEventsRequest } from '#props/requests';
 import { EventCardsResponse } from '#props/services';
 
-export const getEventCards = async ({
-  categoryId = '',
+export const fetchEventCards = async ({
+  categoryName = '',
   offset = 4
-}: FetchEventsByIdRequest) => (
+}: FetchEventsRequest) => (
   await apolloClient().query<EventCardsResponse>({
     query: GET_EVENTS,
     variables: {
-      categoryId,
+      categoryName,
       offset
     }
   })

@@ -1,0 +1,7 @@
+.react-loading-skeleton {
+  @apply bg-secondary-main rounded-none;
+
+  &:after {
+    @apply bg-gradient-to-r from-secondary-main via-secondary-dark to-secondary-main;
+  }
+}

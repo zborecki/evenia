@@ -6,7 +6,7 @@ export interface EventsSlice {
 }
 
 export interface TabsSlice {
-  categoryId: number;
+  categoryName: string;
 }
 
 export interface UserSlice {

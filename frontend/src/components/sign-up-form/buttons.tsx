@@ -3,9 +3,12 @@ import { FC } from 'react';
 
 import { Button } from '#components/button';
 import { ROUTE } from '#constants/routes';
-import { FormButtonsProps } from '#props/components';
 
-const Buttons: FC<FormButtonsProps> = ({ isSubmitting }) => {
+interface Props {
+  isSubmitting: boolean;
+}
+
+const Buttons: FC<Props> = ({ isSubmitting }) => {
   const button = useTranslations('Button');
 
   return (

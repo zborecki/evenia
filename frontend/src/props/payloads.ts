@@ -2,6 +2,6 @@ import { PayloadAction } from '@reduxjs/toolkit';
 
 import { EventCard } from '#props/common';
 
-export type SetCategoryIdPayload = PayloadAction<{ categoryId: number; }>;
+export type SET_CATEGORY_NAME_PAYLOAD = PayloadAction<{ categoryName: string }>;
 
-export type SetEventsPayload = PayloadAction<EventCard[]>;
+export type SET_EVENTS_PAYLOAD = PayloadAction<EventCard[]>;

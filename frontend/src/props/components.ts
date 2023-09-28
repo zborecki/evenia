@@ -1,3 +1,5 @@
+/* eslint-disable max-lines */
+
 import { FormikErrors, FormikTouched } from 'formik';
 import {
   ChangeEventHandler, HTMLInputTypeAttribute, HTMLProps, PropsWithChildren, ReactElement
@@ -5,9 +7,7 @@ import {
 
 import { CategoriesResponse } from './services';
 
-import {
-  Details, EventCard, Link, ProtectedLink
-} from '#props/common';
+import { Details, Link } from '#props/common';
 
 export type AuthProps = Details & PropsWithChildren;
 
@@ -22,24 +22,11 @@ export type ButtonProps = {
   width?: 'full' | 'standard';
 } & BaseProps & HTMLProps<HTMLButtonElement> & Link;
 
-export interface FormButtonsProps {
-  isSubmitting: boolean;
-}
-
-export interface FooterLinksProps {
-  links: ProtectedLink[];
-}
-
 export interface FormContentProps<T> {
   errors: FormikErrors<T>;
   handleChange?: ChangeEventHandler<HTMLInputElement>;
   touched: FormikTouched<T>;
   values: T;
-}
-
-export interface InputButtonProps {
-  errors?: string;
-  onClick: () => void;
 }
 
 export interface InputProps {
@@ -53,16 +40,12 @@ export interface InputProps {
 }
 
 export interface InteractiveEventsProps {
-  endpoint?: string;
-  initialEvents: EventCard[];
+  categoryName?: string;
   offset: number;
 }
 
-export interface InteractiveSEOProps {
-  ariaLabel?: string;
-}
-
-export interface LayoutProps extends PropsWithChildren {
+export interface LayoutProps
+  extends PropsWithChildren {
   params: {
     locale: string;
   }
@@ -75,7 +58,8 @@ export interface LazyImageProps {
   width: number;
 }
 
-export interface SectionProps extends BaseProps, PropsWithChildren {
+export interface SectionProps
+  extends BaseProps, PropsWithChildren {
   title: string;
 }
 
