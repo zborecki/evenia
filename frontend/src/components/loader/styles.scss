@@ -1,0 +1,18 @@
+.evenia-loader {
+  @apply flex justify-center;
+
+  &__spinner {
+    @apply
+      animate-spin
+      border-[3px]
+      border-b-transparent
+      border-secondary-main
+      border-solid
+      box-border
+      h-8
+      inline-block
+      rounded-full
+      w-8
+    ;
+  }
+}

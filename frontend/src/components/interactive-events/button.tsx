@@ -3,15 +3,17 @@ import { FC, useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Button } from '#components/button';
+import { Loader } from '#components/loader';
 import { AppDispatch } from '#libraries/redux';
 import { UPDATE_EVENTS } from '#reducers/events-reducers';
 import { tabsSelector } from '#slices/tabs-slice';
 
 interface Props {
   initialOffset: number;
+  isLoading: boolean;
 }
 
-const SeeMoreButton: FC<Props> = ({ initialOffset }) => {
+const SeeMoreButton: FC<Props> = ({ isLoading, initialOffset }) => {
   const dispatch = useDispatch<AppDispatch>();
   const common = useTranslations('Common');
   const { categoryName } = useSelector(tabsSelector);
@@ -23,7 +25,7 @@ const SeeMoreButton: FC<Props> = ({ initialOffset }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoryName, dispatch, offset]);
 
-  return (
+  return isLoading ? <Loader /> : (
     <Button
       as="button"
       className="evenia-interactive-events__button"

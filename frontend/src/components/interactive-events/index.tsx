@@ -30,7 +30,7 @@ const InteractiveEvents: FC<InteractiveEventsProps> = ({ categoryName = '', offs
       />
       {
         events.length >= offset
-          ? <SeeMoreButton initialOffset={offset} />
+          ? <SeeMoreButton initialOffset={offset} isLoading={isLoading} />
           : undefined
       }
     </>

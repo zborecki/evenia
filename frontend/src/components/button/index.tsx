@@ -7,6 +7,7 @@ const Button: FC<ButtonProps> = ({
   as = 'a',
   children,
   className = '',
+  hidden,
   href,
   size = 'medium',
   variant = 'contained',
@@ -18,6 +19,9 @@ const Button: FC<ButtonProps> = ({
   return (
     <Component
       className={`evenia-button evenia-button--${size} evenia-button--${variant} evenia-button--${width} ${className}`}
+      style={{
+        display: hidden ? 'none' : undefined
+      }}
       {...(as === 'a' ? { href } : { ...rest })}
     >
       { children }

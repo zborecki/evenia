@@ -17,6 +17,7 @@ export interface BaseProps {
 
 export type ButtonProps = {
   as?: 'a' | 'button';
+  hidden?: boolean;
   size?: 'medium';
   variant?: 'contained' | 'outlined';
   width?: 'full' | 'standard';
