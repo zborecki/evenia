@@ -2,11 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
-type Props = {
-  [key in 'alt' | 'blurDataURL' | 'slug' | 'src']: string;
-};
+import { EventCardCoverProps } from '#components/event-card/props';
 
-const Cover: FC<Props> = ({
+const Cover: FC<EventCardCoverProps> = ({
   alt, blurDataURL, slug, src
 }) => (
   <Link

@@ -2,11 +2,11 @@ import { FC } from 'react';
 
 import { Content } from '#components/event-card/content';
 import { Cover } from '#components/event-card/cover';
-import { EventCard as Props } from '#props/common';
+import { IEventCard } from '#types/items';
 
 import '#components/event-card/styles.scss';
 
-const EventCard: FC<Props> = ({
+const EventCard: FC<IEventCard> = ({
   author: { organizerName },
   date,
   title,

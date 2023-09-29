@@ -1,35 +1,44 @@
 import { useTranslations } from 'next-intl';
-import { FC, useCallback, useState } from 'react';
+import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Button } from '#components/button';
+import { Grid } from '#components/interactive-events/grid';
 import { Loader } from '#components/loader';
 import { AppDispatch } from '#libraries/redux';
-import { UPDATE_EVENTS } from '#reducers/events-reducers';
-import { tabsSelector } from '#slices/tabs-slice';
+import { GET_PAGINATED_EVENTS } from '#reducers/paginated-events';
+import { EventCardSkeletons } from '#skeletons/event-cards';
+import { NEXT_PAGE, paginatedEventsSelector } from '#slices/paginated-events';
 
-interface Props {
-  initialOffset: number;
-  isLoading: boolean;
-}
-
-const SeeMoreButton: FC<Props> = ({ isLoading, initialOffset }) => {
-  const dispatch = useDispatch<AppDispatch>();
+const SeeMoreButton = () => {
+  const {
+    categoryName, hasNextPage, isLoading, offset
+  } = useSelector(paginatedEventsSelector);
   const common = useTranslations('Common');
-  const { categoryName } = useSelector(tabsSelector);
-  const [offset, setOffset] = useState<number>(2 * initialOffset);
+  const dispatch = useDispatch<AppDispatch>();
 
-  const onClick = useCallback(() => {
-    dispatch(UPDATE_EVENTS({ categoryName, offset }));
-    setOffset((previousOffset) => previousOffset + initialOffset);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [categoryName, dispatch, offset]);
+  const handleOtherEvents = useCallback(() => {
+    dispatch(GET_PAGINATED_EVENTS({
+      categoryName,
+      first: offset.next,
+      skip: offset.next
+    }));
+    dispatch(NEXT_PAGE());
+  }, [categoryName, offset]);
 
-  return isLoading ? <Loader /> : (
+  return isLoading ? (
+    <>
+      <Grid>
+        <EventCardSkeletons count={offset.initial} />
+      </Grid>
+      <Loader />
+    </>
+  ) : (
     <Button
       as="button"
       className="evenia-interactive-events__button"
-      onClick={onClick}
+      hidden={!hasNextPage}
+      onClick={handleOtherEvents}
     >
       { common('see_more') }
     </Button>

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 
-import { Auth } from '#components/auth';
+import { AuthWrapper } from '#components/auth-wrapper';
 import { SignUpForm } from '#components/sign-up-form';
 import AuthLayout from '#layouts/auth-layout';
 
@@ -14,9 +14,9 @@ const Page = () => {
 
   return (
     <AuthLayout>
-      <Auth description={t('description')} title={t('title')}>
+      <AuthWrapper description={t('description')} title={t('title')}>
         <SignUpForm />
-      </Auth>
+      </AuthWrapper>
     </AuthLayout>
   );
 };

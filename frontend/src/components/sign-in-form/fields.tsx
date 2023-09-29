@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 
 import { Input } from '#components/input';
-import { FormContentProps, SignInFormProps } from '#props/components';
+import { FormContentProps, SignInFormProps } from '#types/props';
 
 const Fields = ({
   errors, handleChange, touched, values

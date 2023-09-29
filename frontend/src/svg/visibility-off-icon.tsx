@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { BaseProps } from '#props/components';
+import { BaseProps } from '#types/common';
 
 const VisibilityOffIcon: FC<BaseProps> = ({ className }) => (
   <svg
@@ -22,4 +22,4 @@ const VisibilityOffIcon: FC<BaseProps> = ({ className }) => (
   </svg>
 );
 
-export default VisibilityOffIcon;
+export { VisibilityOffIcon };

@@ -2,15 +2,11 @@
 
 import { FC, useCallback, useState } from 'react';
 
-import VisibilityIcon from '#svg/visibility-icon';
-import VisibilityOffIcon from '#svg/visibility-off-icon';
+import { InputButtonProps } from '#components/input/props';
+import { VisibilityOffIcon } from '#svg/visibility-off-icon';
+import { VisibilityOnIcon } from '#svg/visibility-on-icon';
 
-interface Props {
-  errors?: string;
-  onClick: () => void;
-}
-
-const Button: FC<Props> = ({ errors, onClick }) => {
+const Button: FC<InputButtonProps> = ({ errors, onClick }) => {
   const [isActivated, setIsActivated] = useState(false);
 
   const switchMode = useCallback(() => {
@@ -24,7 +20,7 @@ const Button: FC<Props> = ({ errors, onClick }) => {
       type="button"
       onClick={switchMode}
     >
-      { isActivated ? <VisibilityOffIcon /> : <VisibilityIcon /> }
+      { isActivated ? <VisibilityOffIcon /> : <VisibilityOnIcon /> }
     </button>
   );
 };

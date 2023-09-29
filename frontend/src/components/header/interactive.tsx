@@ -9,8 +9,8 @@ import { Button } from '#components/button';
 import { COOKIE } from '#constants/keys';
 import { ROUTE } from '#constants/routes';
 import { AppDispatch } from '#libraries/redux';
-import { FETCH_USER_DETAILS_BY_ID } from '#reducers/user-reducers';
-import { userSelector } from '#slices/user-slice';
+import { GET_AUTHORIZED_USER_BY_ID } from '#reducers/user';
+import { userSelector } from '#slices/user';
 
 const Interactive = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -20,7 +20,7 @@ const Interactive = () => {
 
   useEffect(() => {
     if (cookies.auth_token) {
-      dispatch(FETCH_USER_DETAILS_BY_ID(cookies.auth_token));
+      dispatch(GET_AUTHORIZED_USER_BY_ID(cookies.auth_token));
     }
   }, [cookies, dispatch]);
 

@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 
-export const apolloClient = () => new ApolloClient({
+export const graphQLClient = () => new ApolloClient({
   cache: new InMemoryCache(),
   headers: {
     Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`

@@ -5,12 +5,12 @@ import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { TabsProps } from '#props/components';
-import { SET_CATEGORY_NAME } from '#slices/tabs-slice';
+import { SET_CATEGORY_NAME } from '#slices/paginated-events';
+import { GetCategoriesResponse } from '#types/responses';
 
 import '#components/all-events/tabs/styles.scss';
 
-const Tabs: FC<TabsProps> = ({ categories }) => {
+const Tabs: FC<GetCategoriesResponse> = ({ categories }) => {
   const dispatch = useDispatch();
   const common = useTranslations('Common');
 

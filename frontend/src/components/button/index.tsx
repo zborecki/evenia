@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { ButtonProps } from '#props/components';
+import { ButtonProps } from '#components/button/props';
 import '#components/button/styles.scss';
 
 const Button: FC<ButtonProps> = ({

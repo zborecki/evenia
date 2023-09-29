@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { SectionProps } from '#props/components';
+import { SectionProps } from '#components/section/props';
 import '#components/section/styles.scss';
 
 const Section: FC<SectionProps> = ({ children, className = '', title }) => (

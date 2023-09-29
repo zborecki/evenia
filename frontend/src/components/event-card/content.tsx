@@ -1,11 +1,9 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
-type Props = {
-  [key in 'author' | 'date' | 'slug' | 'title']: string;
-};
+import { EventCardContentProps } from '#components/event-card/props';
 
-const Content: FC<Props> = ({
+const Content: FC<EventCardContentProps> = ({
   author, date, slug, title
 }) => (
   <div className="evenia-event-card__content">

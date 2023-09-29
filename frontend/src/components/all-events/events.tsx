@@ -3,13 +3,14 @@
 import { useSelector } from 'react-redux';
 
 import { InteractiveEvents } from '#components/interactive-events';
-import { tabsSelector } from '#slices/tabs-slice';
+import { usePaginatedEvents } from '#hooks/usePaginatedEvents';
+import { paginatedEventsSelector } from '#slices/paginated-events';
 
-const OFFSET = 4;
 const Events = () => {
-  const { categoryName } = useSelector(tabsSelector);
+  const { categoryName } = useSelector(paginatedEventsSelector);
+  const { initializeEvents } = usePaginatedEvents({ categoryName, offset: 8 });
 
-  return <InteractiveEvents categoryName={categoryName} offset={OFFSET} />;
+  return <InteractiveEvents initializeEvents={initializeEvents} />;
 };
 
 export { Events };

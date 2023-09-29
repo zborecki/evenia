@@ -1,27 +1,29 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 import { EventCard } from '#components/event-card';
-import { EventCard as Card } from '#props/common';
-import { EventCardSkeletons } from '#skeletons/event-cards';
+import { Grid } from '#components/interactive-events/grid';
+import { InteractiveEventsProps } from '#components/interactive-events/props';
+import { paginatedEventsSelector } from '#slices/paginated-events';
 
-interface Props {
-  events: Card[];
-  isLoading: boolean;
-  offset: number;
-}
+const Cards: FC<InteractiveEventsProps> = ({ initializeEvents }) => {
+  const { categoryName, events } = useSelector(paginatedEventsSelector);
 
-const Cards: FC<Props> = ({ events, isLoading, offset }) => (
-  <ul className="evenia-interactive-events">
-    {
-      isLoading ? <EventCardSkeletons count={offset} /> : (
+  useEffect(() => {
+    initializeEvents();
+  }, [categoryName]);
+
+  return (
+    <Grid>
+      {
         events.map((props) => (
           <li key={`InteractiveEvents-${props.title}-${props.author}`}>
             <EventCard {...props} />
           </li>
         ))
-      )
-    }
-  </ul>
-);
+      }
+    </Grid>
+  );
+};
 
 export { Cards };

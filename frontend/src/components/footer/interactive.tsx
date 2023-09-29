@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-import { links } from '#constants/footer';
+import { footerLinks } from '#constants/footer';
 
 const Interactive = () => {
   const t = useTranslations('Label');
@@ -8,7 +8,7 @@ const Interactive = () => {
   return (
     <ul>
       {
-        links.map(({ children, href, isProtected }) => (!isProtected ? (
+        footerLinks.map(({ children, href, isProtected }) => (!isProtected ? (
           <li className="evenia-footer__item" key={`Footer-interactive-item-${href}`}>
             <a className="evenia-footer__link" href={href}>{ t(children) }</a>
           </li>

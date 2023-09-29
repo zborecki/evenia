@@ -1,6 +1,6 @@
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import '#theme/react-loading-skeleton.scss';
+import '#theme/libraries/react-loading-skeleton.scss';
 import '#skeletons/event-card/styles.scss';
 
 const EventCardSkeleton = () => (

@@ -4,10 +4,10 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { FC } from 'react';
 
-import { LayoutProps } from '#props/components';
-import { GraphQLProvider } from '#providers/apollo-provider';
 import { CookiesProvider } from '#providers/cookies-provider';
+import { GraphQLProvider } from '#providers/graphql-provider';
 import { ReduxProvider } from '#providers/redux-provider';
+import { LayoutProps } from '#types/props';
 
 import 'normalize.css';
 import '#theme/global.scss';

@@ -1,12 +1,9 @@
 import { FC } from 'react';
 
 import { EventCardSkeleton } from '#skeletons/event-card';
+import { EventCardSkeletonsProps } from '#skeletons/event-cards/props';
 
-interface Props {
-  count: number;
-}
-
-const EventCardSkeletons: FC<Props> = ({
+const EventCardSkeletons: FC<EventCardSkeletonsProps> = ({
   count
 }) => Array.from(Array(count).keys()).map((index) => (
   <li key={`EventCardSkeleton-${index}`}>
