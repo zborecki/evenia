@@ -13,6 +13,7 @@ All commands are run from the root of the project, from a terminal:
 - ESLint (custom Airbnb's rules)
 - GraphQL
 - HeadlessUI
+- Keen Slider
 - Next.js (App Router)
 - Next-intl (supports server components)
 - Normalize.css
