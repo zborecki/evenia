@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { BaseProps } from '#props/components';
+import { BaseProps } from '#types/common';
 
 const ErrorIcon: FC<BaseProps> = ({ className }) => (
   <svg
@@ -43,4 +43,4 @@ const ErrorIcon: FC<BaseProps> = ({ className }) => (
   </svg>
 );
 
-export default ErrorIcon;
+export { ErrorIcon };

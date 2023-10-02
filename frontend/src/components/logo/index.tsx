@@ -1,12 +1,13 @@
 import { FC } from 'react';
 
+import { LogoProps } from '#components/logo/props';
 import { ROUTE } from '#constants/routes';
-import { InteractiveSEOProps } from '#props/components';
-import Logomark from '#svg/logomark';
-import Logotype from '#svg/logotype';
+import { Logomark } from '#svg/logomark';
+import { Logotype } from '#svg/logotype';
+
 import '#components/logo/styles.scss';
 
-const Logo: FC<InteractiveSEOProps> = ({ ariaLabel }) => (
+const Logo: FC<LogoProps> = ({ ariaLabel }) => (
   <a
     aria-label={ariaLabel}
     className="evenia-logo"

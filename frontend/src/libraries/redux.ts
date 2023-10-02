@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import { userReducer, userSlice } from '#slices/user-slice';
+import { paginatedEventsReducer, paginatedEventsSlice } from '#slices/paginated-events';
+import { userReducer, userSlice } from '#slices/user';
 
 const store = configureStore({
   devTools: true,
   reducer: {
+    [paginatedEventsSlice.name]: paginatedEventsReducer,
     [userSlice.name]: userReducer
   }
 });

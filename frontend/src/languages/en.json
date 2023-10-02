@@ -1,12 +1,17 @@
 {
+  "All_events": {
+    "title": "Trusted by\nThousand of Events"
+  },
   "Button": {
     "create_account": "Create Account",
     "explore_now": "Explore Now",
     "sign_in": "Sign In"
   },
   "Common": {
+    "all": "All",
     "please_wait": "Please wait...",
-    "return_home": "Return home"
+    "return_home": "Return home",
+    "see_more": "See More"
   },
   "Form": {
     "invalid": "The field is invalid",

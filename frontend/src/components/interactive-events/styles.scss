@@ -1,0 +1,7 @@
+.evenia-interactive-events {
+  @apply gap-10 grid grid-cols-4 mb-10;
+
+  &__button {
+    @apply block mx-auto;
+  }
+}

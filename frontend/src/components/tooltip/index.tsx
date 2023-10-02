@@ -2,7 +2,7 @@
 
 import { FC, cloneElement, useMemo } from 'react';
 
-import { TooltipProps } from '#props/components';
+import { TooltipProps } from '#components/tooltip/props';
 import '#components/tooltip/styles.scss';
 
 const Tooltip: FC<TooltipProps> = ({

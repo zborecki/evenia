@@ -4,9 +4,9 @@ import { useTranslations } from 'next-intl';
 import { FC, useCallback, useState } from 'react';
 
 import { Button } from '#components/input/button';
-import { InputProps } from '#props/components';
+import { InputProps } from '#components/input/props';
+import { ErrorIcon } from '#svg/error-icon';
 import '#components/input/styles.scss';
-import ErrorIcon from '#svg/error-icon';
 
 const Input: FC<InputProps> = ({
   errors,

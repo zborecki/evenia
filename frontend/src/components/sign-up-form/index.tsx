@@ -8,7 +8,6 @@ import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 import { toast } from 'react-toastify';
 
-import { MUTATE_ORGANIZER } from '#/services/organizer-service';
 import { Buttons } from '#components/sign-up-form/buttons';
 import { Fields } from '#components/sign-up-form/fields';
 import { Toast } from '#components/toast';
@@ -16,15 +15,16 @@ import { commonSettings, signUpInitialValues } from '#constants/form';
 import { COOKIE } from '#constants/keys';
 import { ROUTE } from '#constants/routes';
 import { signUpValidationSchema } from '#constants/schemas';
-import { SignUpFormProps } from '#props/components';
-import { MutateOrganizerResponse } from '#props/services';
+import { POST_USER_QUERY } from '#queries/user';
+import { SignUpFormProps } from '#types/props';
+import { PostUserResponse } from '#types/responses';
 
 const SignUpForm = () => {
   const router = useRouter();
   const common = useTranslations('Common');
   const t = useTranslations('Sign_up');
   const [, setCookie] = useCookies([COOKIE.AUTH]);
-  const [createOrganizer, { data }] = useMutation<MutateOrganizerResponse>(MUTATE_ORGANIZER);
+  const [createOrganizer, { data }] = useMutation<PostUserResponse>(POST_USER_QUERY);
   const {
     errors, handleChange, handleSubmit, isSubmitting, touched, values
   } = useFormik<SignUpFormProps>({
@@ -58,7 +58,6 @@ const SignUpForm = () => {
     }, 3500);
 
     return () => clearInterval(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   return (

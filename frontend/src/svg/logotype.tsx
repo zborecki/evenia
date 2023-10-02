@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { BaseProps } from '#props/components';
+import { BaseProps } from '#types/common';
 
 const Logotype: FC<BaseProps> = ({ className }) => (
   <svg
@@ -38,4 +38,4 @@ const Logotype: FC<BaseProps> = ({ className }) => (
   </svg>
 );
 
-export default Logotype;
+export { Logotype };

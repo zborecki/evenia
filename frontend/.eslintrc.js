@@ -26,6 +26,7 @@ module.exports = {
         pathGroupsExcludedImportTypes: ['builtin']
       }
     ],
+    'react-hooks/exhaustive-deps': 'off',
     'import/extensions': 0,
     'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
     'comma-dangle': ['error', 'never'],

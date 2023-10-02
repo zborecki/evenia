@@ -1,3 +1,5 @@
+/* eslint-disable max-lines */
+
 /** @type {import('tailwindcss').Config} */
 
 const plugin = require('tailwindcss/plugin');
@@ -29,6 +31,7 @@ module.exports = {
     extend: {
       borderRadius: {
         '3xl': '20px',
+        card: '14px',
         full: '100px'
       },
       colors: {
@@ -56,6 +59,7 @@ module.exports = {
           main: '#624CF5'
         },
         secondary: {
+          dark: '#FD6053',
           main: '#FA776C'
         }
       },
@@ -69,9 +73,25 @@ module.exports = {
           fontWeight: 700,
           lineHeight: '64px'
         }],
+        'display-sm': ['44px', {
+          fontWeight: 700,
+          lineHeight: '52px'
+        }],
         'heading-md': ['28px', {
           fontWeight: 500,
           lineHeight: '36px'
+        }],
+        'heading-xsm': ['20px', {
+          fontWeight: 500,
+          lineHeight: '28px'
+        }],
+        'label-lg': ['18px', {
+          fontWeight: 500,
+          lineHeight: '24px'
+        }],
+        'label-md': ['16px', {
+          fontWeight: 500,
+          lineHeight: '20px'
         }],
         'label-xsm': ['12px', {
           fontWeight: 500,
@@ -84,6 +104,11 @@ module.exports = {
         'paragraph-sm': ['14px', {
           fontWeight: 400,
           lineHeight: '20px'
+        }],
+        tab: ['20px', {
+          fontWeight: 400,
+          letterSpacing: '0.4px',
+          lineHeight: 'normal'
         }]
       }
     }

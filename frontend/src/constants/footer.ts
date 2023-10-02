@@ -1,7 +1,7 @@
 import { ROUTE } from '#constants/routes';
-import { ProtectedLink } from '#props/common';
+import { IProtectedLink } from '#types/common';
 
-export const links: ProtectedLink[] = [
+export const footerLinks: IProtectedLink[] = [
   {
     children: 'home',
     href: ROUTE.HOME
