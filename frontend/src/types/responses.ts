@@ -1,3 +1,4 @@
+import { IPartner } from './common';
 import { IEventCard } from './items';
 
 export interface GetAuthorizedUserResponse {
@@ -31,6 +32,10 @@ export interface GetPaginatedEventsResponse {
       hasNextPage: boolean;
     };
   }
+}
+
+export interface GetPartnersResponse {
+  partners: IPartner[];
 }
 
 export interface GetUserResponse {
