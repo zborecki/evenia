@@ -1,0 +1,13 @@
+.evenia-partners {
+  @apply bg-indigo-darker;
+
+  .evenia-section {
+    &__container {
+      @apply py-[100px];
+    }
+
+    &__title {
+      @apply mb-14;
+    }
+  }
+}

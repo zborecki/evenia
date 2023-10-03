@@ -26,6 +26,9 @@
     "home": "Home",
     "terms_of_service": "Terms of service"
   },
+  "Partners": {
+    "title": "Our Partners"
+  },
   "Placeholder": {
     "confirm_password": "Confirm password",
     "e_mail": "E-mail",

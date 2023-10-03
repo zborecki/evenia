@@ -20,6 +20,7 @@ All commands are run from the root of the project, from a terminal:
 - React Toastify
 - Redux Toolkit
 - Sass
+- Swiper
 - TailwindCSS
 - Typescript
 - Yup

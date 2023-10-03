@@ -1,0 +1,40 @@
+.evenia-partner {
+  &__container {
+    @apply 
+      border-2
+      border-solid
+      border-transparent
+      box-content 
+      flex 
+      h-[calc(60px+32px)] 
+      items-center 
+      justify-center 
+      rounded-lg
+    ;
+
+    &:hover {
+      @apply bg-indigo-dark border-indigo-main cursor-pointer;
+
+      .evenia-partner {
+        &__image {
+          @apply contrast-100 grayscale-0;
+        }
+      }
+    }
+  }
+
+  &__image {
+    @apply 
+      contrast-50 
+      filter
+      grayscale
+      max-h-[60px] 
+      max-w-[175px]
+      transition-colors
+    ;
+  }
+
+  &__source {
+    @apply h-full w-full;
+  }
+}
