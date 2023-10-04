@@ -1,8 +1,16 @@
 .evenia-section {
-  @apply bg-indigo-dark;
+  @apply bg-indigo-dark relative;
 
   &__container {
     @apply evenia-container py-14;
+  }
+
+  &__pattern {
+    @apply absolute pointer-events-none;
+
+    circle {
+      @apply fill-gray-0/[.04];
+    }
   }
 
   &__title {

@@ -1,0 +1,23 @@
+.evenia-stage-item {
+  &__description {
+    @apply text-paragraph-xl;
+  }
+
+  &__icon {
+    @apply 
+      bg-gray-0/[.2] 
+      mb-6 
+      p-6 
+      rounded-[50%] 
+      w-fit
+    ;
+  }
+
+  &__source {
+    @apply fill-gray-0;
+  }
+
+  &__title {
+    @apply mb-[18px] text-stage-title;
+  }
+}

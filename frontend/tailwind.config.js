@@ -105,11 +105,28 @@ module.exports = {
           fontWeight: 400,
           lineHeight: '20px'
         }],
+        'paragraph-xl': ['20px', {
+          fontWeight: 400,
+          letterSpacing: '0.4px',
+          lineHeight: 'normal'
+        }],
+        'stage-title': ['24px', {
+          fontWeight: 600,
+          letterSpacing: '0.48px',
+          lineHeight: '36px'
+        }],
         tab: ['20px', {
           fontWeight: 400,
           letterSpacing: '0.4px',
           lineHeight: 'normal'
         }]
+      },
+      screens: {
+        sm: { max: '576px' },
+        md: { max: '768px' },
+        lg: { max: '992px' },
+        xl: { max: '1200px' },
+        xxl: { max: '1400px' }
       }
     }
   }

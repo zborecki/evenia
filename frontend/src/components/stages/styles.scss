@@ -1,0 +1,21 @@
+.evenia-stages {
+  @apply bg-primary-main;
+
+  &__list {
+    @apply gap-x-8 grid grid-cols-[repeat(3,minmax(0,426px))];
+
+    @screen xl {
+      @apply gap-x-6;
+    }
+
+    @media screen and (max-width: 822px) {
+      @apply gap-12 grid-cols-1;
+    }
+  }
+
+  .evenia-section {
+    &__title {
+      @apply mb-[70px];
+    }
+  }
+}
