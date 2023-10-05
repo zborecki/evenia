@@ -1,0 +1,43 @@
+.evenia-hero {
+  @apply bg-indigo-darker;
+
+  &__circle {
+    @apply 
+      absolute 
+      bg-[#3865F3]
+      blur-3xl
+      h-full
+      left-4
+      max-h-[186px]
+      max-w-[186px]
+      rounded-[50%] 
+      top-14 
+      w-full
+    ;
+  }
+
+  &__container {
+    @apply 
+      evenia-container 
+      grid 
+      grid-cols-[minmax(0,518px)_1fr] 
+      pt-[100px]
+    ;
+  }
+
+  &__description {
+    @apply mb-14 text-paragraph-lg whitespace-pre-line;
+  }
+
+  &__image {
+    @apply justify-self-end relative;
+  }
+
+  &__source {
+    @apply relative;
+  }
+
+  &__title {
+    @apply mb-10 text-hero-title;
+  }
+}

@@ -85,6 +85,10 @@ module.exports = {
           fontWeight: 500,
           lineHeight: '28px'
         }],
+        'hero-title': ['72px', {
+          fontWeight: 700,
+          lineHeight: 'normal'
+        }],
         'label-lg': ['18px', {
           fontWeight: 500,
           lineHeight: '24px'
