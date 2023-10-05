@@ -1,3 +1,3 @@
-export interface HeaderPublicProps {
-  isLoading: boolean;
+export interface HeaderInteractiveProps {
+  authToken?: string;
 }

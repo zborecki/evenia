@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import { FC } from 'react';
 
+import { Options } from '#components/profile-card/options';
 import { ProfileCardProps } from '#components/profile-card/props';
+
 import '#components/profile-card/styles.scss';
 
 const ProfileCard: FC<ProfileCardProps> = ({ alt, avatar, fullName }) => (
@@ -14,6 +16,7 @@ const ProfileCard: FC<ProfileCardProps> = ({ alt, avatar, fullName }) => (
       width={59}
     />
     <p className="evenia-profile-card__full-name">{ fullName }</p>
+    <Options />
   </div>
 );
 

@@ -1,0 +1,49 @@
+.evenia-dropdown {
+  @apply relative inline-block;
+
+  &__button {
+    @apply bg-transparent inline-flex p-1 rounded-lg transition-colors;
+
+    &:hover {
+      @apply bg-indigo-darker;
+
+      path {
+        @apply fill-secondary-main;
+      }
+    }
+
+    path {
+      @apply fill-gray-0/[0.2] transition-colors;
+    }
+  }
+
+  &__item {
+    @apply hover:bg-indigo-darker hover:cursor-pointer transition-colors;
+    
+    &:first-of-type {
+      @apply rounded-t-lg;
+    }
+
+    &:last-of-type {
+      @apply rounded-b-lg;
+    }
+
+    a, button {
+      @apply block p-3 text-left text-paragraph-lg w-full;
+    }
+  }
+
+  &__list {
+    @apply 
+      absolute 
+      bg-indigo-dark
+      drop-shadow-dropdown
+      mt-4
+      origin-top-right 
+      right-0
+      rounded-lg
+      w-56
+      z-20
+    ;
+  }
+}

@@ -63,6 +63,9 @@ module.exports = {
           main: '#FA776C'
         }
       },
+      dropShadow: {
+        dropdown: '0px 2px 15px rgba(0, 0, 0, 0.15)'
+      },
       fontSize: {
         'button-md': ['18px', {
           fontWeight: 600,

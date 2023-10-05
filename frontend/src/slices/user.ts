@@ -43,8 +43,11 @@ export const userSlice = createSlice({
   initialState,
   name: 'user',
   reducers: {
+    RESET_USER: () => initialState
   }
 });
+
+export const { RESET_USER } = userSlice.actions;
 
 export const userReducer = userSlice.reducer;
 
