@@ -40,6 +40,9 @@
     "full_name": "Full name",
     "password": "Password"
   },
+  "Profile_card": {
+    "alt": "{fullName}'s avatar"
+  },
   "Sign_in": {
     "description": "Log in with your email account",
     "error": "Incorrect email or password",

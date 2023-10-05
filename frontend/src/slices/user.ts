@@ -6,6 +6,7 @@ import { UserSlice } from '#types/slices';
 
 const initialState: UserSlice = {
   data: {
+    avatar: '',
     email: '',
     fullName: '',
     id: '',
@@ -18,7 +19,13 @@ const initialState: UserSlice = {
 export const userSlice = createSlice({
   extraReducers: ({ addCase }) => {
     addCase(GET_AUTHORIZED_USER_BY_ID.fulfilled, (_, { payload }) => ({
-      data: { ...payload },
+      data: {
+        avatar: payload.avatar.url,
+        email: payload.email,
+        fullName: payload.fullName,
+        id: payload.id,
+        password: payload.password
+      },
       isLoading: false,
       isLoggedIn: true
     }));

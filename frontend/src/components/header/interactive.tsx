@@ -5,18 +5,18 @@ import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Button } from '#components/button';
+import { Public } from '#components/header/public';
+import { ProfileCard } from '#components/profile-card';
 import { COOKIE } from '#constants/keys';
-import { ROUTE } from '#constants/routes';
 import { AppDispatch } from '#libraries/redux';
 import { GET_AUTHORIZED_USER_BY_ID } from '#reducers/user';
 import { userSelector } from '#slices/user';
 
 const Interactive = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const button = useTranslations('Button');
+  const t = useTranslations('Profile_card');
   const [cookies] = useCookies([COOKIE.AUTH]);
-  const user = useSelector(userSelector);
+  const { data: { avatar, fullName }, isLoading, isLoggedIn } = useSelector(userSelector);
 
   useEffect(() => {
     if (cookies.auth_token) {
@@ -27,9 +27,15 @@ const Interactive = () => {
   return (
     <div>
       {
-        !user.isLoggedIn ? (
-          <Button href={ROUTE.SIGN_IN}>{ button('sign_in') }</Button>
-        ) : <p>{ user.data.fullName }</p>
+        !isLoggedIn ? (
+          <Public isLoading={isLoading} />
+        ) : (
+          <ProfileCard
+            alt={t('alt', { fullName })}
+            avatar={avatar}
+            fullName={fullName}
+          />
+        )
       }
     </div>
   );

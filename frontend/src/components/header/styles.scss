@@ -4,4 +4,8 @@
   &__container {
     @apply evenia-container flex items-center justify-between;
   }
+
+  &__public {
+    @apply flex gap-x-4 items-center;
+  }
 }
