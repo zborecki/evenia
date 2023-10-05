@@ -9,10 +9,11 @@ const Section: FC<SectionProps> = ({
   className = '',
   density,
   dotSize,
+  id,
   pattern = false,
   title
 }) => (
-  <section className={`evenia-section ${className}`}>
+  <section className={`evenia-section ${className}`} id={id}>
     {
       pattern && (
         <Pattern

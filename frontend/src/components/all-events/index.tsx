@@ -8,7 +8,7 @@ const AllEvents = () => {
   const t = useTranslations('All_events');
 
   return (
-    <Section title={t('title')}>
+    <Section id="all-events" title={t('title')}>
       <Categories />
       <Events />
     </Section>

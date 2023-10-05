@@ -7,6 +7,11 @@ export interface ILink {
   href?: string;
 }
 
+export interface IImage {
+  alt: string;
+  src: string;
+}
+
 export interface IPartner {
   companyName: string;
   logo: {

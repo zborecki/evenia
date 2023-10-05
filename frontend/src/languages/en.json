@@ -19,6 +19,11 @@
     "too_long": "The field contains too many characters",
     "too_short": "The phrase is too short"
   },
+  "Hero": {
+    "alt": "The Biggest Virtual Events - Image",
+    "description": "Book and learn helpful tips from 3,168+ mentors in\nworld-class companies with our global community.",
+    "title": "The Biggest Virtual Events"
+  },
   "Home": {
     "title": "Hello Next.js!"
   },
