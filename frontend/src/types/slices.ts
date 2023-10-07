@@ -12,6 +12,7 @@ export interface PaginatedEventsSlice {
 
 export interface UserSlice {
   data: {
+    avatar: string;
     email: string;
     fullName: string;
     id: string;

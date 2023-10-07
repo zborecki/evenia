@@ -40,9 +40,12 @@ export const POST_USER_QUERY = gql`
 export const GET_USER_DETAILS_QUERY = gql`
   query GetUserDetails($id: ID!) {
     organizer (where: {id: $id}) {
-      email,
-      fullName,
-      id,
+      avatar {
+        url
+      }
+      email
+      fullName
+      id
       password
     }
   }

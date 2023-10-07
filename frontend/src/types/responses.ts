@@ -40,6 +40,9 @@ export interface GetPartnersResponse {
 
 export interface GetUserResponse {
   organizer: {
+    avatar: {
+      url: string;
+    };
     email: string;
     fullName: string;
     id: string;

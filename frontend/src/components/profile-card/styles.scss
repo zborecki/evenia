@@ -1,0 +1,11 @@
+.evenia-profile-card {
+  @apply flex gap-x-[10px] items-center;
+
+  &__avatar {
+    @apply rounded-[50%];
+  }
+
+  &__full-name {
+    @apply text-paragraph-lg;
+  }
+}

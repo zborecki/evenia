@@ -5,6 +5,7 @@
   "Button": {
     "create_account": "Create Account",
     "explore_now": "Explore Now",
+    "logout": "Logout",
     "sign_in": "Sign In"
   },
   "Common": {
@@ -39,6 +40,9 @@
     "e_mail": "E-mail",
     "full_name": "Full name",
     "password": "Password"
+  },
+  "Profile_card": {
+    "alt": "{fullName}'s avatar"
   },
   "Sign_in": {
     "description": "Log in with your email account",
