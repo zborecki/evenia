@@ -15,7 +15,9 @@
     "see_more": "See More"
   },
   "Event": {
+    "agenda": "What You'll Learn:",
     "created_by": "by",
+    "date_and_time": "Date & Time:",
     "free": "Free",
     "price": "${value}"
   },

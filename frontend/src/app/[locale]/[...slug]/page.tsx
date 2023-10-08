@@ -29,7 +29,12 @@ const Page: FC<SlugProps> = async ({ params: { slug } }) => {
           price={event.price}
           title={event.title}
         />
-        <EventDetails />
+        <EventDetails
+          date={event.date}
+          description={event.description}
+          details={event.details}
+          location={event.location}
+        />
       </main>
     </Layout>
   );

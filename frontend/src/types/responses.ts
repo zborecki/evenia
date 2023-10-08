@@ -29,10 +29,13 @@ export interface GetEventBySlugResponse {
       organizerName: string;
     };
     date: string;
+    description: string;
+    details: string;
     image: {
       fileName: string;
       url: string;
     };
+    location: string;
     price: number;
     title: string;
   }

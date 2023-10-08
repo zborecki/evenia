@@ -75,6 +75,11 @@ module.exports = {
           letterSpacing: '0.36px',
           lineHeight: 'normal'
         }],
+        'event-details-paragraph': ['20px', {
+          fontWeight: 400,
+          letterSpacing: '0.4px',
+          lineHeight: 'normal'
+        }],
         'event-overview-title': ['48px', {
           fontWeight: 700,
           lineHeight: 'normal'

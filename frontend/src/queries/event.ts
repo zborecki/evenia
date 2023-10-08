@@ -7,10 +7,13 @@ export const GET_EVENT_BY_SLUG_QUERY = gql`
         organizerName
       }
       date
+      description
+      details
       image {
         fileName
         url
       }
+      location
       price
       title
     }
