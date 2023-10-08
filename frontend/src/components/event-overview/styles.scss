@@ -1,0 +1,39 @@
+.evenia-event-overview {
+  @apply bg-indigo-darker;
+
+  &__author {
+    &--highlighted {
+      @apply text-secondary-main;
+    }
+  }
+
+  &__author, &__price {
+    @apply text-paragraph-lg;
+  }
+
+  &__container {
+    @apply evenia-container gap-x-8 grid grid-cols-[auto_minmax(0,483px)];
+  }
+
+  &__date {
+    @apply text-label-md uppercase;
+  }
+
+  &__details {
+    @apply flex gap-12;
+  }
+
+  &__panel {
+    @apply flex flex-col gap-5 self-center;
+  }
+
+  &__price {
+    &--free {
+      @apply text-success-main;
+    }
+  }
+
+  &__title {
+    @apply text-event-overview-title;
+  }
+}

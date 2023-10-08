@@ -61,6 +61,9 @@ module.exports = {
         secondary: {
           dark: '#FD6053',
           main: '#FA776C'
+        },
+        success: {
+          main: '#15BF59' // dark lemon lime
         }
       },
       dropShadow: {
@@ -70,6 +73,15 @@ module.exports = {
         'button-md': ['18px', {
           fontWeight: 600,
           letterSpacing: '0.36px',
+          lineHeight: 'normal'
+        }],
+        'event-details-paragraph': ['20px', {
+          fontWeight: 400,
+          letterSpacing: '0.4px',
+          lineHeight: 'normal'
+        }],
+        'event-overview-title': ['48px', {
+          fontWeight: 700,
           lineHeight: 'normal'
         }],
         'display-md': ['52px', {

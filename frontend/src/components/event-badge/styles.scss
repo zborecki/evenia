@@ -1,0 +1,27 @@
+.evenia-event-badge {
+  @apply 
+    border-2 
+    border-solid 
+    border-transparent 
+    gap-x-6 
+    grid 
+    grid-cols-[auto_1fr]
+    last-of-type:mb-0
+    mb-12
+    p-2 
+    rounded-lg
+    transition-colors
+  ;
+
+  &:hover {
+    @apply bg-indigo-dark border-indigo-main;
+  }
+
+  &__icon path {
+    @apply fill-primary-main;
+  }
+
+  &__title {
+    @apply font-semibold mb-1;
+  }
+}
