@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { FC } from 'react';
 
+import { EventDetails } from '#components/event-details';
 import { EventOverview } from '#components/event-overview';
 import { mergeSlug } from '#constants/routes';
 import Layout from '#layouts/base-layout';
@@ -21,10 +22,14 @@ const Page: FC<SlugProps> = async ({ params: { slug } }) => {
         <EventOverview
           author={event.author.organizerName}
           date={event.date}
-          image={event.image.url}
+          image={{
+            alt: event.image.fileName,
+            src: event.image.url
+          }}
           price={event.price}
           title={event.title}
         />
+        <EventDetails />
       </main>
     </Layout>
   );

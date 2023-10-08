@@ -8,6 +8,7 @@ export const GET_EVENT_BY_SLUG_QUERY = gql`
       }
       date
       image {
+        fileName
         url
       }
       price

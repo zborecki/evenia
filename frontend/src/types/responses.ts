@@ -30,6 +30,7 @@ export interface GetEventBySlugResponse {
     };
     date: string;
     image: {
+      fileName: string;
       url: string;
     };
     price: number;

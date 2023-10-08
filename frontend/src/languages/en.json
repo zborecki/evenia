@@ -14,6 +14,11 @@
     "return_home": "Return home",
     "see_more": "See More"
   },
+  "Event": {
+    "created_by": "by",
+    "free": "Free",
+    "price": "${value}"
+  },
   "Form": {
     "invalid": "The field is invalid",
     "required": "The field is required",

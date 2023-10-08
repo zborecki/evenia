@@ -1,0 +1,7 @@
+.evenia-event-details {
+  @apply bg-indigo-darker;
+
+  &__container {
+    @apply evenia-container pb-24 pt-36;
+  }
+}
