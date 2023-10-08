@@ -4,6 +4,7 @@ import { EventOverviewPanelProps } from './props';
 
 import { Author } from '#components/event-overview/author';
 import { Price } from '#components/event-overview/price';
+import { Register } from '#components/event-overview/register';
 
 const Panel: FC<EventOverviewPanelProps> = ({
   author, date, price, title
@@ -15,6 +16,7 @@ const Panel: FC<EventOverviewPanelProps> = ({
       <Price price={price} />
       <Author author={author} />
     </div>
+    <Register />
   </div>
 );
 

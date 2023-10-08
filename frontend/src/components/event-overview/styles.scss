@@ -33,6 +33,10 @@
     }
   }
 
+  &__register-button {
+    @apply max-w-fit mt-8;
+  }
+
   &__title {
     @apply text-event-overview-title;
   }

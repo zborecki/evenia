@@ -1,0 +1,63 @@
+.evenia-checkout {
+  @apply relative z-50;
+
+  &__background {
+    @apply bg-indigo-darker/[0.5] fixed inset-0;
+  }
+
+  &__detail {
+    @apply gap-x-8 grid grid-cols-[minmax(274px,0px)_auto] first-of-type:mb-[calc(50px-24px)];
+
+    &:last-of-type {
+      .evenia-checkout__paragraph {
+        &:last-of-type {
+          @apply font-bold text-[16px]/[24px] text-secondary-main;
+        }
+      }
+    }
+
+    .evenia-checkout__paragraph {
+      &:last-of-type {
+        @apply text-end;
+      }
+    }
+  }
+
+  &__details {
+    @apply flex flex-col gap-6;
+  }
+
+  &__header {
+    @apply mb-6 text-evenia-checkout-summary text-gray-0;
+  }
+
+  &__image {
+    @apply max-h-[245px] object-cover rounded-t-3xl;
+  }
+
+  &__modal {
+    @apply
+      bg-indigo-dark
+      max-w-[492px]
+      overflow-hidden
+      p-[30px]
+      rounded-b-3xl
+      shadow-2xl
+      transform
+      transition-all
+      w-full 
+    ;
+  }
+
+  &__paragraph {
+    @apply text-paragraph-sm;
+  }
+
+  &__position {
+    @apply flex items-center justify-center min-h-full p-4;
+  }
+
+  &__wrapper {
+    @apply fixed inset-0 overflow-y-auto;
+  }
+}

@@ -3,10 +3,18 @@
     "title": "Trusted by\nThousand of Events"
   },
   "Button": {
+    "checkout": "Checkout",
     "create_account": "Create Account",
     "explore_now": "Explore Now",
     "logout": "Logout",
+    "register": "Register",
     "sign_in": "Sign In"
+  },
+  "Checkout": {
+    "fees": "Fess",
+    "subtotal": "Subtotal",
+    "summary": "Order Summary",
+    "total": "Total"
   },
   "Common": {
     "all": "All",

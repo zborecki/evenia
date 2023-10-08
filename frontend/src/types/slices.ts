@@ -1,5 +1,13 @@
 import { IEventCard } from './items';
 
+export interface EventSlice {
+  image: {
+    [image in 'alt' | 'src']: string;
+  };
+  price: number;
+  title: string;
+}
+
 export interface PaginatedEventsSlice {
   categoryName: string;
   events: IEventCard[];
