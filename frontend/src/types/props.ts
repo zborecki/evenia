@@ -22,6 +22,12 @@ export type SignUpFormProps = {
   [key in 'fullName' | 'repeatPassword']: string;
 } & SignInFormProps;
 
+export interface SlugProps {
+  params: {
+    slug: string | string[];
+  }
+}
+
 export interface SubmitButtonProps {
   isSubmitting: boolean;
 }

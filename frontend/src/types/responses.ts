@@ -23,6 +23,20 @@ export interface GetCategoriesResponse {
   }[];
 }
 
+export interface GetEventBySlugResponse {
+  event: {
+    author: {
+      organizerName: string;
+    };
+    date: string;
+    image: {
+      url: string;
+    };
+    price: number;
+    title: string;
+  }
+}
+
 export interface GetPaginatedEventsResponse {
   eventsConnection: {
     edges: {

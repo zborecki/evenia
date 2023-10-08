@@ -5,3 +5,5 @@ export enum ROUTE {
   SIGN_UP = '/sign-up',
   TERMS_OF_SERVICE = '/terms-of-service'
 }
+
+export const mergeSlug = (slug: string[]) => slug.join('/');
