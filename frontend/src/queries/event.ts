@@ -6,6 +6,9 @@ export const GET_EVENT_BY_SLUG_QUERY = gql`
       author {
         organizerName
       }
+      category {
+        name
+      }
       date
       description
       details

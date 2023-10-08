@@ -28,6 +28,9 @@ export interface GetEventBySlugResponse {
     author: {
       organizerName: string;
     };
+    category: {
+      name: string;
+    };
     date: string;
     description: string;
     details: string;
@@ -38,6 +41,14 @@ export interface GetEventBySlugResponse {
     location: string;
     price: number;
     title: string;
+  }
+}
+
+export interface GetPaginatedEventsCountResponse {
+  eventsConnection: {
+    pageInfo: {
+      pageSize: number;
+    }
   }
 }
 

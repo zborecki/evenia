@@ -1,0 +1,11 @@
+.evenia-related-events {
+  @apply bg-indigo-dark;
+
+  &__container {
+    @apply evenia-container py-12;
+  }
+
+  &__title {
+    @apply text-display-sm mb-12;
+  }
+}

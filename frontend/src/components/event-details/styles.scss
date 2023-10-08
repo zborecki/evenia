@@ -10,16 +10,17 @@
   }
 
   &__container {
-    @apply evenia-container gap-x-24 grid grid-cols-[minmax(0,634px)_1fr] pb-24 pt-36;
+    @apply 
+      evenia-container 
+      gap-x-24 
+      grid 
+      grid-cols-[minmax(0,634px)_1fr] 
+      pb-24 
+      pt-36
+    ;
   }
 
   &__details, &__information {
     @apply text-event-details-paragraph;
-  }
-}
-
-.evenia-date-and-time {
-  &__title {
-    @apply mb-1;
   }
 }

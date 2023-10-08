@@ -19,7 +19,9 @@
     "created_by": "by",
     "date_and_time": "Date & Time:",
     "free": "Free",
-    "price": "${value}"
+    "location": "Location:",
+    "price": "${value}",
+    "related_events": "Related Events"
   },
   "Form": {
     "invalid": "The field is invalid",
