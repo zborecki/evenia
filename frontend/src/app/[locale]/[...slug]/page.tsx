@@ -13,13 +13,14 @@ import { SlugProps } from '#types/props';
 const Page: FC<SlugProps> = async ({ params: { slug } }) => {
   const eventSlug = mergeSlug(slug as string[]);
   const { event } = await getEventBySlug(eventSlug);
-  const { pageInfo } = await getPaginatedEventsCount({
-    categoryName: event.category.name
-  });
 
   if (!event) {
     notFound();
   }
+
+  const { pageInfo } = await getPaginatedEventsCount({
+    categoryName: event.category.name
+  });
 
   return (
     <Layout>

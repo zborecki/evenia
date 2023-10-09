@@ -75,6 +75,10 @@ module.exports = {
           letterSpacing: '0.36px',
           lineHeight: 'normal'
         }],
+        'evenia-checkout-summary': ['18px', {
+          fontWeight: 700,
+          lineHeight: '24px'
+        }],
         'event-details-paragraph': ['20px', {
           fontWeight: 400,
           letterSpacing: '0.4px',
