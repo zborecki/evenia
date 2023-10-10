@@ -88,6 +88,10 @@ module.exports = {
           fontWeight: 700,
           lineHeight: 'normal'
         }],
+        'evenia-tickets-alert': ['28px', {
+          fontWeight: 700,
+          lineHeight: '36px'
+        }],
         'display-md': ['52px', {
           fontWeight: 700,
           lineHeight: '64px'
@@ -95,6 +99,10 @@ module.exports = {
         'display-sm': ['44px', {
           fontWeight: 700,
           lineHeight: '52px'
+        }],
+        'display-xsm': ['36px', {
+          fontWeight: 700,
+          lineHeight: '44px'
         }],
         'heading-md': ['28px', {
           fontWeight: 500,

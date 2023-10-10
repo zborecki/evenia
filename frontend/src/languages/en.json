@@ -5,6 +5,7 @@
   "Button": {
     "checkout": "Checkout",
     "create_account": "Create Account",
+    "explore_events": "Explore Events",
     "explore_now": "Explore Now",
     "logout": "Logout",
     "register": "Register",
@@ -48,6 +49,13 @@
   "Label": {
     "home": "Home",
     "terms_of_service": "Terms of service"
+  },
+  "My_tickets": {
+    "no_tickets": {
+      "description": "Explore events from anywhere and anytime",
+      "title": "You don't have any tickets yet"
+    },
+    "title": "My Tickets"
   },
   "Partners": {
     "title": "Our Partners"

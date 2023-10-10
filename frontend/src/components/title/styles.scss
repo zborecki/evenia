@@ -1,0 +1,19 @@
+.evenia-title {
+  @apply bg-indigo-darker relative;
+
+  &__container {
+    @apply evenia-container py-14;
+  }
+
+  &__pattern {
+    @apply absolute pointer-events-none;
+
+    circle {
+      @apply fill-gray-0/[.05];
+    }
+  }
+
+  &__title {
+    @apply text-display-xsm text-gray-0;
+  }
+}
