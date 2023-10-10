@@ -1,4 +1,4 @@
-import { IPartner } from './common';
+import { IPartner, ITicket } from './common';
 import { IEventCard } from './items';
 
 export interface GetAuthorizedUserResponse {
@@ -65,6 +65,12 @@ export interface GetPaginatedEventsResponse {
 
 export interface GetPartnersResponse {
   partners: IPartner[];
+}
+
+export interface GetTicketsResponse {
+  organizer: {
+    tickets: ITicket[];
+  }
 }
 
 export interface GetUserResponse {
