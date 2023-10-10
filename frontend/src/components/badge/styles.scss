@@ -1,0 +1,23 @@
+.evenia-badge {
+  @apply box-content px-5 py-[6px] rounded-full max-w-fit;
+
+  &--completed {
+    @apply bg-success-main/[0.14];
+  }
+
+  &--pending {
+    @apply bg-gray-100/[0.14];
+  }
+
+  &__label {
+    @apply text-evenia-badge-label;
+
+    &--completed {
+      @apply text-success-main;
+    }
+
+    &--pending {
+      @apply text-gray-100;
+    }
+  }
+}

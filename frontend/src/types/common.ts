@@ -30,6 +30,10 @@ export interface ITicket {
       organizerName: string;
     };
     date: string;
+    image: {
+      fileName: string;
+      url: string;
+    }
     title: string;
   };
   isPaid: boolean;

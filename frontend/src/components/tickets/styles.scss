@@ -21,6 +21,14 @@
     @apply flex flex-col gap-3;
   }
 
+  &__grid {
+    @apply gap-10 grid grid-cols-3;
+  }
+
+  &__interactive {
+    @apply flex justify-center mt-10;
+  }
+
   &__motto {
     @apply text-center mb-2 text-paragraph-sm;
   }

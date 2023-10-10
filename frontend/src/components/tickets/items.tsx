@@ -1,21 +1,38 @@
+'use client';
+
 import { FC } from 'react';
 
-import { ITicket } from '#types/common';
+import { TicketCard } from '#components/ticket-card';
+import { Grid } from '#components/tickets/grid';
+import { Interactive } from '#components/tickets/interactive';
+import { TicketsItemsProps } from '#components/tickets/props';
+import { usePaginatedTickets } from '#hooks/usePaginatedTickets';
 
-interface ItemsProps {
-  tickets: ITicket[];
-}
+const Items: FC<TicketsItemsProps> = ({ defaultOffset, initialTickets, userId }) => {
+  const {
+    fetchOtherTickets, hasNextPage, isLoading, tickets
+  } = usePaginatedTickets({
+    defaultOffset, initialTickets, userId
+  });
 
-const Items: FC<ItemsProps> = ({ tickets }) => (
-  <div>
-    {
-        tickets.map((x) => (
-          <div>
-            { x.event.title }
-          </div>
-        ))
-      }
-  </div>
-);
+  return (
+    <>
+      <Grid>
+        {
+          tickets.map(({ event, isPaid }, index) => (
+            <li key={`Ticket-${event.title}-${index}`}>
+              <TicketCard event={event} isPaid={isPaid} />
+            </li>
+          ))
+        }
+      </Grid>
+      <Interactive
+        fetchOtherTickets={fetchOtherTickets}
+        hasNextPage={hasNextPage}
+        isLoading={isLoading}
+      />
+    </>
+  );
+};
 
 export { Items };

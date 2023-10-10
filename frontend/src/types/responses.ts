@@ -68,8 +68,12 @@ export interface GetPartnersResponse {
 }
 
 export interface GetTicketsResponse {
-  organizer: {
-    tickets: ITicket[];
+  organizersConnection: {
+    edges: {
+      node: {
+        tickets: ITicket[];
+      }
+    }[];
   }
 }
 
