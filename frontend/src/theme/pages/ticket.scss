@@ -1,0 +1,11 @@
+.evenia-ticket {
+  @apply bg-indigo-dark min-h-[calc(100vh-99px-102px)];
+
+  &__button {
+    @apply mb-[50px];
+  }
+
+  &__container {
+    @apply evenia-container py-[50px];
+  }
+}

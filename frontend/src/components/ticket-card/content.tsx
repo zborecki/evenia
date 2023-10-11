@@ -9,6 +9,7 @@ const Content: FC<TicketCardContentProps> = ({
   date,
   isPaid,
   organizerName,
+  slug,
   title
 }) => {
   const t = useTranslations('Ticket_card');
@@ -21,7 +22,7 @@ const Content: FC<TicketCardContentProps> = ({
         }
       </Badge>
       <time className="evenia-ticket-card__date" dateTime={date}>{ date }</time>
-      <Link href="/">
+      <Link href={slug}>
         <h2 className="evenia-ticket-card__title">{ title }</h2>
       </Link>
       <p className="evenia-ticket-card__author">{ organizerName }</p>

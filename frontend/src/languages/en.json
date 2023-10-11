@@ -3,11 +3,14 @@
     "title": "Trusted by\nThousand of Events"
   },
   "Button": {
+    "back_to_tickets": "Back To Tickets",
     "checkout": "Checkout",
     "create_account": "Create Account",
     "explore_events": "Explore Events",
     "explore_now": "Explore Now",
+    "get_link": "Get Link",
     "logout": "Logout",
+    "pay_now": "Pay Now",
     "register": "Register",
     "sign_in": "Sign In"
   },
@@ -19,9 +22,12 @@
   },
   "Common": {
     "all": "All",
+    "date": "Date",
     "please_wait": "Please wait...",
     "return_home": "Return home",
-    "see_more": "See More"
+    "see_more": "See More",
+    "subtotal": "Subtotal",
+    "total": "Total"
   },
   "Event": {
     "agenda": "What You'll Learn:",
@@ -106,5 +112,8 @@
   "Ticket_card": {
     "paid": "Paid",
     "unpaid": "Unpaid"
+  },
+  "Ticket_preview": {
+    "destination": "You're Going To"
   }
 }

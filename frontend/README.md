@@ -24,3 +24,6 @@ All commands are run from the root of the project, from a terminal:
 - TailwindCSS
 - Typescript
 - Yup
+
+## 💻 Preview
+[![Preview](https://img.youtube.com/vi/EGM5ew27RKM/0.jpg)](https://www.youtube.com/watch?v=EGM5ew27RKM)

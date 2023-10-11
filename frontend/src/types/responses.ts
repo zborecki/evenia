@@ -1,3 +1,5 @@
+/* eslint-disable max-lines */
+
 import { IPartner, ITicket } from './common';
 import { IEventCard } from './items';
 
@@ -65,6 +67,27 @@ export interface GetPaginatedEventsResponse {
 
 export interface GetPartnersResponse {
   partners: IPartner[];
+}
+
+export interface GetTicketPreviewResponse {
+  organizer: {
+    email: string;
+    tickets: {
+      event: {
+        author: {
+          organizerName: string;
+        }
+        date: string;
+        image: {
+          fileName: string;
+          url: string;
+        }
+        price: number;
+        title: string;
+      };
+      isPaid: boolean;
+    }[];
+  }
 }
 
 export interface GetTicketsResponse {

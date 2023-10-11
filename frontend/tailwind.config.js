@@ -136,6 +136,10 @@ module.exports = {
           fontWeight: 400,
           lineHeight: '28px'
         }],
+        'paragraph-md': ['16px', {
+          fontWeight: 400,
+          lineHeight: '24px'
+        }],
         'paragraph-sm': ['14px', {
           fontWeight: 400,
           lineHeight: '20px'
