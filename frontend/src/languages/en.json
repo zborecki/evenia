@@ -5,6 +5,7 @@
   "Button": {
     "checkout": "Checkout",
     "create_account": "Create Account",
+    "explore_events": "Explore Events",
     "explore_now": "Explore Now",
     "logout": "Logout",
     "register": "Register",
@@ -48,6 +49,13 @@
   "Label": {
     "home": "Home",
     "terms_of_service": "Terms of service"
+  },
+  "My_tickets": {
+    "no_tickets": {
+      "description": "Explore events from anywhere and anytime",
+      "title": "You don't have any tickets yet"
+    },
+    "title": "My Tickets"
   },
   "Partners": {
     "title": "Our Partners"
@@ -94,5 +102,9 @@
   "Terms_of_service": {
     "description": "Learn how to sharpen your focus so you can get more done! This class is ideal for students, professionals and lifelong learners. About this event This is an online event.\n\nWhat You'll Learn:\n\nHow to be more productive through increased focus. Apps and online tools that improve your concentration. How to trick yourself into paying more attention to tasks at hand.",
     "title": "Terms of service"
+  },
+  "Ticket_card": {
+    "paid": "Paid",
+    "unpaid": "Unpaid"
   }
 }

@@ -75,6 +75,10 @@ module.exports = {
           letterSpacing: '0.36px',
           lineHeight: 'normal'
         }],
+        'evenia-badge-label': ['14px', {
+          fontWeight: 600,
+          lineHeight: '20px'
+        }],
         'evenia-checkout-summary': ['18px', {
           fontWeight: 700,
           lineHeight: '24px'
@@ -88,6 +92,10 @@ module.exports = {
           fontWeight: 700,
           lineHeight: 'normal'
         }],
+        'evenia-tickets-alert': ['28px', {
+          fontWeight: 700,
+          lineHeight: '36px'
+        }],
         'display-md': ['52px', {
           fontWeight: 700,
           lineHeight: '64px'
@@ -95,6 +103,10 @@ module.exports = {
         'display-sm': ['44px', {
           fontWeight: 700,
           lineHeight: '52px'
+        }],
+        'display-xsm': ['36px', {
+          fontWeight: 700,
+          lineHeight: '44px'
         }],
         'heading-md': ['28px', {
           fontWeight: 500,

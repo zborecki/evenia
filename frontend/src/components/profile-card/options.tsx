@@ -3,6 +3,7 @@ import { useCookies } from 'react-cookie';
 import { useDispatch } from 'react-redux';
 
 import { Dropdown } from '#components/dropdown';
+import { DropdownItem } from '#components/dropdown-item';
 import { Logout } from '#components/profile-card/logout';
 import { COOKIE } from '#constants/keys';
 import { ROUTE } from '#constants/routes';
@@ -21,6 +22,7 @@ const Options = () => {
 
   return (
     <Dropdown button={<ChevronDownIcon />}>
+      <DropdownItem as="a" href={ROUTE.MY_TICKETS}>My Tickets</DropdownItem>
       <Logout handleLogout={handleLogout} />
     </Dropdown>
   );

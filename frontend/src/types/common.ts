@@ -23,3 +23,18 @@ export interface IPartner {
 export interface IProtectedLink extends ILink {
   isProtected?: boolean;
 }
+
+export interface ITicket {
+  event: {
+    author: {
+      organizerName: string;
+    };
+    date: string;
+    image: {
+      fileName: string;
+      url: string;
+    }
+    title: string;
+  };
+  isPaid: boolean;
+}

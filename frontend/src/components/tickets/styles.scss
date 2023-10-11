@@ -1,0 +1,35 @@
+.evenia-tickets {
+  @apply bg-indigo-dark;
+
+  &__alert {
+    @apply text-evenia-tickets-alert;
+  }
+
+  &__button {
+    @apply self-center max-w-fit;
+  }
+
+  &__container {
+    @apply evenia-container min-h-[calc(100vh-469px)] py-14;
+
+    &:has(.evenia-tickets__empty) {
+      @apply flex flex-col items-center justify-center;
+    }
+  }
+
+  &__empty {
+    @apply flex flex-col gap-3;
+  }
+
+  &__grid {
+    @apply gap-10 grid grid-cols-3;
+  }
+
+  &__interactive {
+    @apply flex justify-center mt-10;
+  }
+
+  &__motto {
+    @apply text-center mb-2 text-paragraph-sm;
+  }
+}

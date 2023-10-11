@@ -1,0 +1,41 @@
+$_LINE_CLAMP: 2;
+
+.evenia-ticket-card {
+  @apply max-w-[405px];
+
+  &__author {
+    @apply text-label-md;
+  }
+
+  &__author, &__date {
+    @apply text-gray-60;
+  }
+
+  &__content {
+    @apply 
+      bg-indigo-light
+      gap-[14px]
+      grid
+      p-5
+      rounded-b-card;
+  }
+
+  &__date {
+    @apply text-label-lg;
+  }
+
+  &__image {
+    @apply max-h-[224px] object-cover rounded-t-card;
+  }
+
+  &__link {
+    @apply block;
+  }
+
+  &__title {
+    @apply min-h-[56px] overflow-hidden text-heading-xsm;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: #{$_LINE_CLAMP};
+  }
+}
