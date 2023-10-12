@@ -1,7 +1,10 @@
 import '#components/divider/styles.scss';
+import { FC } from 'react';
 
-const Divider = () => (
-  <div className="evenia-divider" />
+import { BaseProps } from '#types/common';
+
+const Divider: FC<BaseProps> = ({ className = '' }) => (
+  <div className={`evenia-divider ${className}`} />
 );
 
 export { Divider };

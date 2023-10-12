@@ -35,7 +35,7 @@
 
   &:hover {
     &.evenia-button {
-      &--contained {
+      &--contained:not(:disabled) {
         @apply bg-secondary-main text-gray-0;
       }
 

@@ -4,6 +4,7 @@ export interface TicketCardContentProps {
   date: string;
   isPaid: boolean;
   organizerName: string;
+  slug: string;
   title: string;
 }
 

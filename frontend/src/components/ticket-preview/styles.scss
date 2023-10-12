@@ -1,0 +1,53 @@
+.evenia-detail {
+  &__content {
+    @apply text-gray-100 text-label-md;
+  }
+
+  &__title {
+    @apply mb-2 text-evenia-checkout-summary;
+  }
+}
+
+.evenia-ticket-preview {
+  @apply max-w-[545px] mx-auto;
+
+  &__author, &__destination {
+    @apply text-paragraph-md;
+  }
+
+  &__content {
+    @apply bg-indigo-light flex flex-col gap-6 p-[30px] rounded-b-3xl;
+  }
+
+  &__cover {
+    @apply min-h-[260px] relative;
+  }
+
+  &__details {
+    @apply gap-x-6 grid grid-cols-2;
+  }
+
+  &__divider {
+    @apply bg-indigo-dark my-0;
+  }
+
+  &__image {
+    @apply absolute object-cover rounded-t-3xl;
+  }
+
+  &__introduction, &__summary {
+    @apply flex items-center justify-between;
+  }
+
+  &__price, &__total {
+    @apply text-paragraph-lg;
+  }
+
+  &__price {
+    @apply font-bold;
+  }
+
+  &__title {
+    @apply max-w-[282px] text-evenia-tickets-alert;
+  }
+}

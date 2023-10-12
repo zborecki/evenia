@@ -30,6 +30,7 @@ export interface ITicket {
       organizerName: string;
     };
     date: string;
+    id?: number;
     image: {
       fileName: string;
       url: string;
