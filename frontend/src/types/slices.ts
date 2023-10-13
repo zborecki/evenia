@@ -4,6 +4,7 @@ export interface EventSlice {
   image: {
     [image in 'alt' | 'src']: string;
   };
+  id: string;
   price: number;
   title: string;
 }

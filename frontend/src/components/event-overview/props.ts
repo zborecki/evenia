@@ -14,6 +14,7 @@ export interface EventOverviewProps
     alt: string;
     src: string;
   };
+  id: string;
 }
 
 export interface EventOverviewPriceProps {

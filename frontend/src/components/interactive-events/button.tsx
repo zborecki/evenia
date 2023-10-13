@@ -28,7 +28,7 @@ const SeeMoreButton = () => {
 
   return isLoading ? (
     <>
-      <Grid>
+      <Grid className="mt-10">
         <EventCardSkeletons count={offset.initial} />
       </Grid>
       <Loader className="mt-10" />

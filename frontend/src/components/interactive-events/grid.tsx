@@ -1,7 +1,9 @@
 import { FC, PropsWithChildren } from 'react';
 
-const Grid: FC<PropsWithChildren> = ({ children }) => (
-  <ul className="evenia-interactive-events">
+import { BaseProps } from '#types/common';
+
+const Grid: FC<BaseProps & PropsWithChildren> = ({ children, className = '' }) => (
+  <ul className={`evenia-interactive-events ${className}`}>
     { children }
   </ul>
 );

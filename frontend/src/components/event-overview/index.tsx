@@ -11,12 +11,13 @@ import { SET_EVENT } from '#slices/event';
 import '#components/event-overview/styles.scss';
 
 const EventOverview: FC<EventOverviewProps> = ({
-  author, date, image, price, title
+  author, date, id, image, price, title
 }) => {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     dispatch(SET_EVENT({
+      id,
       image,
       price,
       title

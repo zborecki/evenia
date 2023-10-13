@@ -1,6 +1,14 @@
 import { graphQLClient } from '#libraries/apollo-client';
-import { GET_TICKET_PREVIEW_QUERY, GET_TICKETS_QUERY } from '#queries/tickets';
+import { BUY_TICKET_QUERY, GET_TICKET_PREVIEW_QUERY, GET_TICKETS_QUERY } from '#queries/tickets';
 import { GetTicketPreviewResponse, GetTicketsResponse } from '#types/responses';
+
+export const buyTicket = async (userId: string, eventId: string) => graphQLClient().mutate({
+  mutation: BUY_TICKET_QUERY,
+  variables: {
+    eventId,
+    userId
+  }
+});
 
 export const getTicketPreview = async (userId: string, eventId: string) => {
   const { organizer } = (await graphQLClient().query<GetTicketPreviewResponse>({
