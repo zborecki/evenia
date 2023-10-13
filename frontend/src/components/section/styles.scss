@@ -15,5 +15,9 @@
 
   &__title {
     @apply mb-[50px] text-display-sm whitespace-pre-line;
+
+    @screen sm {
+      @apply text-display-xsm;
+    }
   }
 }

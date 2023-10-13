@@ -12,16 +12,17 @@ const Cover: FC<EventCardCoverProps> = ({
     href={slug}
     prefetch={false}
   >
-    <Image
-      alt={alt}
-      blurDataURL={blurDataURL}
-      className="evenia-event-card__image"
-      height={174}
-      loading="lazy"
-      placeholder="blur"
-      src={src}
-      width={294}
-    />
+    <div className="evenia-event-card__image-container">
+      <Image
+        alt={alt}
+        blurDataURL={blurDataURL}
+        className="evenia-event-card__image"
+        loading="lazy"
+        placeholder="blur"
+        src={src}
+        fill
+      />
+    </div>
   </Link>
 );
 

@@ -25,7 +25,11 @@ $_LINE_CLAMP: 2;
   }
 
   &__image {
-    @apply max-h-[224px] object-cover rounded-t-card;
+    @apply absolute object-cover rounded-t-card;
+  }
+
+  &__image-container {
+    @apply relative min-h-[224px];
   }
 
   &__link {
@@ -37,5 +41,9 @@ $_LINE_CLAMP: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: #{$_LINE_CLAMP};
+  }
+
+  @media screen and (max-width: 1110px) {
+    @apply max-w-full;
   }
 }

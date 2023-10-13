@@ -28,6 +28,7 @@ const EventOverview: FC<EventOverviewProps> = ({
       <div className="evenia-event-overview__container">
         <Image
           alt={image.alt ?? ''}
+          className="evenia-event-overview__image"
           height={663}
           src={image.src ?? '/event.webp'}
           width={742}

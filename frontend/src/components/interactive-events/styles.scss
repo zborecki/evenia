@@ -4,4 +4,12 @@
   &__button {
     @apply block mt-10 mx-auto;
   }
+
+  @screen xl {
+    @apply gap-8 grid-cols-2;
+  }
+
+  @media screen and (max-width: 648px) {
+    @apply grid-cols-1;
+  }
 }

@@ -12,14 +12,15 @@ const Cover: FC<TicketCardCoverProps> = ({
     href={slug}
     prefetch={false}
   >
-    <Image
-      alt={alt}
-      className="evenia-ticket-card__image"
-      height={224}
-      loading="lazy"
-      src={src}
-      width={405}
-    />
+    <div className="evenia-ticket-card__image-container">
+      <Image
+        alt={alt}
+        className="evenia-ticket-card__image"
+        loading="lazy"
+        src={src}
+        fill
+      />
+    </div>
   </Link>
 );
 

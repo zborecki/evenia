@@ -13,6 +13,14 @@
 
   &__container {
     @apply evenia-container gap-x-8 grid grid-cols-[auto_minmax(0,483px)];
+
+    @media screen and (max-width: 1110px) {
+      @apply py-[50px];
+    }
+
+    @screen lg {
+      @apply block;
+    }
   }
 
   &__date {
@@ -21,6 +29,12 @@
 
   &__details {
     @apply flex gap-12;
+  }
+
+  &__image {
+    @media screen and (max-width: 1110px) {
+      @apply hidden;
+    }
   }
 
   &__panel {
@@ -39,5 +53,9 @@
 
   &__title {
     @apply text-event-overview-title;
+
+    @screen lg {
+      @apply max-w-[600px];
+    }
   }
 }

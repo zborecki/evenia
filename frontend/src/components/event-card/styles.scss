@@ -1,7 +1,7 @@
 $_LINE_CLAMP: 2;
 
 .evenia-event-card {
-  @apply max-w-fit;
+  @apply max-w-[294px];
 
   &__author {
     @apply text-label-lg;
@@ -16,7 +16,6 @@ $_LINE_CLAMP: 2;
       bg-indigo-light
       gap-[14px]
       grid
-      max-w-[294px]
       p-5
       rounded-b-card;
   }
@@ -26,7 +25,11 @@ $_LINE_CLAMP: 2;
   }
   
   &__image {
-    @apply max-h-[174px] object-cover rounded-t-card;
+    @apply absolute min-h-[174px] object-cover rounded-t-card;
+  }
+
+  &__image-container {
+    @apply min-h-[174px] relative;
   }
 
   &__link {
@@ -38,5 +41,17 @@ $_LINE_CLAMP: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: #{$_LINE_CLAMP};
+
+    @screen xl {
+      @apply min-h-[56px];
+    }
+
+    @media screen and (max-width: 648px) {
+      @apply min-h-max;
+    }
+  }
+
+  @screen xl {
+    @apply max-w-full;
   }
 }
