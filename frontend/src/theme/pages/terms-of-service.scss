@@ -7,13 +7,25 @@
 
   &__content {
     @apply gap-6 grid grid-cols-[1fr_minmax(0,634px)];
+
+    @screen lg {
+      @apply grid-cols-1;
+    }
   }
 
   &__description {
     @apply text-paragraph-lg whitespace-pre-line;
+
+    @screen sm {
+      @apply text-paragraph-md;
+    }
   }
 
   &__title {
     @apply text-display-md;
+
+    @screen sm {
+      @apply text-display-sm;
+    }
   }
 }

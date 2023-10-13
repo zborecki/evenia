@@ -23,6 +23,14 @@
 
   &__grid {
     @apply gap-10 grid grid-cols-3;
+
+    @media screen and (max-width: 1110px) {
+      @apply gap-8 grid-cols-2;
+    }
+
+    @media screen and (max-width: 648px) {
+      @apply grid-cols-1;
+    }
   }
 
   &__interactive {

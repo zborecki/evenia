@@ -1,5 +1,28 @@
 import { gql } from '@apollo/client';
 
+export const BUY_TICKET_QUERY = gql`
+  mutation BuyTicket($userId: ID!, $eventId: ID!) {
+    updateOrganizer (
+      data: {
+        tickets: {
+          create: {
+            data: {
+              event: { connect: { id: $eventId } },
+              isPaid: false
+            }
+          }
+        }
+      }
+      where: {id: $userId}
+    ) {
+      updatedAt
+    }
+    publishOrganizer(where: {id: $userId}) {
+      updatedAt
+    }
+  }
+`;
+
 export const GET_TICKET_PREVIEW_QUERY = gql`
   query GetTicketPreview($userId: ID!, $eventId: ID!) {
     organizer(where: {id: $userId}) {

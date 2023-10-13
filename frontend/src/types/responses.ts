@@ -36,6 +36,7 @@ export interface GetEventBySlugResponse {
     date: string;
     description: string;
     details: string;
+    id: string;
     image: {
       fileName: string;
       url: string;

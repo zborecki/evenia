@@ -9,6 +9,7 @@ const initialState: EventSlice = {
     alt: '',
     src: ''
   },
+  id: '',
   price: 0,
   title: ''
 };

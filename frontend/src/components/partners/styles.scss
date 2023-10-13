@@ -4,6 +4,10 @@
   .evenia-section {
     &__container {
       @apply py-[100px];
+
+      @screen md {
+        @apply py-[50px];
+      }
     }
 
     &__title {

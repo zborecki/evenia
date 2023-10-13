@@ -18,9 +18,19 @@
       pb-24 
       pt-36
     ;
+
+    @media screen and (max-width: 1110px) {
+      @apply grid-cols-1 py-[50px];
+    }
   }
 
   &__details, &__information {
     @apply text-event-details-paragraph;
+  }
+
+  &__information {
+    @media screen and (max-width: 1110px) {
+      @apply mb-12;
+    }
   }
 }

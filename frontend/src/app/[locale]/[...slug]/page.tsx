@@ -28,6 +28,7 @@ const Page: FC<SlugProps> = async ({ params: { slug } }) => {
         <EventOverview
           author={event.author.organizerName}
           date={event.date}
+          id={event.id}
           image={{
             alt: event.image.fileName,
             src: event.image.url

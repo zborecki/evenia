@@ -12,6 +12,7 @@ export const GET_EVENT_BY_SLUG_QUERY = gql`
       date
       description
       details
+      id
       image {
         fileName
         url

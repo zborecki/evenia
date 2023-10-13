@@ -23,14 +23,34 @@
       grid-cols-[minmax(0,518px)_1fr] 
       pt-[100px]
     ;
+
+    @media screen and (max-width: 1110px) {
+      @apply py-[50px]
+    }
+
+    @screen sm {
+      @apply block;
+    }
   }
 
   &__description {
     @apply mb-14 text-paragraph-lg whitespace-pre-line;
+
+    @screen md {
+      @apply mb-10;
+    }
+
+    @screen sm {
+      @apply text-paragraph-md;
+    }
   }
 
   &__image {
     @apply justify-self-end relative;
+
+    @media screen and (max-width: 1110px) {
+      @apply hidden;
+    }
   }
 
   &__source {
@@ -39,5 +59,13 @@
 
   &__title {
     @apply mb-10 text-hero-title;
+
+    @screen md {
+      @apply mb-4;
+    }
+
+    @screen sm {
+      @apply max-w-[500px] text-display-md;
+    }
   }
 }

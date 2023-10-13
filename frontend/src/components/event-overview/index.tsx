@@ -11,12 +11,13 @@ import { SET_EVENT } from '#slices/event';
 import '#components/event-overview/styles.scss';
 
 const EventOverview: FC<EventOverviewProps> = ({
-  author, date, image, price, title
+  author, date, id, image, price, title
 }) => {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     dispatch(SET_EVENT({
+      id,
       image,
       price,
       title
@@ -28,6 +29,7 @@ const EventOverview: FC<EventOverviewProps> = ({
       <div className="evenia-event-overview__container">
         <Image
           alt={image.alt ?? ''}
+          className="evenia-event-overview__image"
           height={663}
           src={image.src ?? '/event.webp'}
           width={742}

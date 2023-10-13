@@ -26,11 +26,15 @@ const Items: FC<TicketsItemsProps> = ({ defaultOffset, initialTickets, userId })
           ))
         }
       </Grid>
-      <Interactive
-        fetchOtherTickets={fetchOtherTickets}
-        hasNextPage={hasNextPage}
-        isLoading={isLoading}
-      />
+      {
+        initialTickets.length === defaultOffset && (
+          <Interactive
+            fetchOtherTickets={fetchOtherTickets}
+            hasNextPage={hasNextPage}
+            isLoading={isLoading}
+          />
+        )
+      }
     </>
   );
 };
